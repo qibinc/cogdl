@@ -245,9 +245,45 @@ class LinkPrediction(BaseTask):
 
         edge_list = self.data.edge_index.cpu().numpy()
         edge_list = list(zip(edge_list[0], edge_list[1]))
+        def remove_multiple_edges(edge_list):
+            edge_set = set()
+            for x, y in edge_list:
+                if x <= y:
+                    edge_set.add((x, y))
+                else:
+                    edge_set.add((y, x))
+            return list(edge_set)
+        edge_list = remove_multiple_edges(edge_list)
+
         self.train_data, self.valid_data, self.test_data = divide_data(
             edge_list, [0.85, 0.05, 0.10]
         )
+        num_nodes = self.data.y.shape[0]
+        from collections import defaultdict
+        out_degrees = np.zeros(num_nodes)
+        for x, y in self.train_data:
+            out_degrees[x] += 1
+            out_degrees[y] += 1
+        
+        def filter_zero(edge_list):
+            new = []
+            a = []
+            for x, y in edge_list:
+                if out_degrees[x] == 0 or out_degrees[y] == 0:
+                    a.append((x, y))
+                    out_degrees[x] += 1
+                    out_degrees[y] += 1
+                else:
+                    new.append((x, y))
+            return edge_list, a
+        
+        self.valid_data, a = filter_zero(self.valid_data)
+        self.train_data += a
+        self.test_data, a = filter_zero(self.test_data)
+        self.train_data += a
+
+        import pickle as pkl
+        pkl.dump(self.train_data, open('tmp.pkl', 'wb'))
 
         self.valid_data, self.test_data = gen_node_pairs(
             self.train_data, self.valid_data, self.test_data

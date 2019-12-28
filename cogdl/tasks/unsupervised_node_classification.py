@@ -10,13 +10,13 @@ import torch
 import torch.nn.functional as F
 from scipy import sparse as sp
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import f1_score
+from sklearn.metrics import f1_score, accuracy_score
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.utils import shuffle as skshuffle
 from tqdm import tqdm
 
 from cogdl import options
-from cogdl.data import Dataset, InMemoryDataset
+from cogdl.data import Dataset
 from cogdl.datasets import build_dataset
 from cogdl.models import build_model
 
@@ -41,7 +41,13 @@ class UnsupervisedNodeClassification(BaseTask):
         super(UnsupervisedNodeClassification, self).__init__(args)
         dataset = build_dataset(args)
         self.data = dataset[0]
-        if issubclass(dataset.__class__.__bases__[0], InMemoryDataset):
+        try:
+            import torch_geometric
+        except ImportError:
+            pyg = False
+        else:
+            pyg = True
+        if pyg and issubclass(dataset.__class__.__bases__[0], torch_geometric.data.Dataset):
             self.num_nodes = self.data.y.shape[0]
             self.num_classes = dataset.num_classes
             self.label_matrix = np.zeros((self.num_nodes, self.num_classes), dtype=int)
@@ -53,7 +59,8 @@ class UnsupervisedNodeClassification(BaseTask):
         self.model = build_model(args)
         self.hidden_size = args.hidden_size
         self.num_shuffle = args.num_shuffle
-        self.is_weighted = self.data.edge_attr is not None
+        # self.is_weighted = self.data.edge_attr is not None
+        self.is_weighted = None
 
     def train(self):
         G = nx.Graph()
@@ -91,7 +98,8 @@ class UnsupervisedNodeClassification(BaseTask):
         # score each train/test group
         all_results = defaultdict(list)
         # training_percents = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
-        training_percents = [0.1, 0.3, 0.5, 0.7, 0.9]
+        # training_percents = [0.1, 0.3, 0.5, 0.7, 0.9]
+        training_percents = [0.8]
 
         for train_percent in training_percents:
             for shuf in shuffles:

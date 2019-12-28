@@ -3,6 +3,7 @@ import os
 import os.path as osp
 import sys
 from itertools import product
+from collections import defaultdict
 
 import networkx as nx
 import numpy as np
@@ -88,3 +89,63 @@ class DBLP(EdgelistLabel):
         dataset = "dblp"
         path = osp.join(osp.dirname(osp.realpath(__file__)), "../..", "data", dataset)
         super(DBLP, self).__init__(path, dataset)
+
+
+class Edgelist(Dataset):
+
+    def __init__(self, root, name):
+        self.name = name
+        edge_list_path = os.path.join(root, name + '.edgelist')
+        node_label_path = os.path.join(root, name + '.nodelabel')
+        edge_index, y = self._preprocess(edge_list_path, node_label_path)
+        self.data = Data(x=None, edge_index=edge_index, y=y)
+        self.transform = None
+
+    def get(self, idx):
+        assert idx == 0
+        return self.data
+
+    def _preprocess(self, edge_list_path, node_label_path):
+        with open(edge_list_path) as f:
+            edge_list = []
+            node2id = defaultdict(int)
+            for line in f:
+                x, y = list(map(int, line.split()))
+                # Reindex
+                if x not in node2id:
+                    node2id[x] = len(node2id)
+                if y not in node2id:
+                    node2id[y] = len(node2id)
+                edge_list.append([node2id[x], node2id[y]])
+        
+        num_nodes = len(node2id)
+        with open(node_label_path) as f:
+            nodes = []
+            labels = []
+            label2id = defaultdict(int)
+            for line in f:
+                x, label = list(map(int, line.split()))
+                if label not in label2id:
+                    label2id[label] = len(label2id)
+                nodes.append(node2id[x])
+                labels.append(label2id[label])
+        assert num_nodes == len(set(nodes))
+        y = torch.zeros(num_nodes, len(label2id))
+        y[nodes, labels] = 1
+        return torch.LongTensor(edge_list).t(), y
+
+
+@register_dataset("usa_airport")
+class USAAirport(Edgelist):
+    def __init__(self):
+        super().__init__('../cogdl/data/struc2vec/graph/', 'usa-airports')
+
+@register_dataset("brazil_airport")
+class BrazilAirport(Edgelist):
+    def __init__(self):
+        super().__init__('../cogdl/data/struc2vec/graph/', 'brazil-airports')
+
+@register_dataset("europe_airport")
+class EuropeAirport(Edgelist):
+    def __init__(self):
+        super().__init__('../cogdl/data/struc2vec/graph/', 'europe-airports')
