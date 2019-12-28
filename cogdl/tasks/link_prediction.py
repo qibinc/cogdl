@@ -1,7 +1,7 @@
+import copy
 import random
 from collections import defaultdict
 
-import copy
 import networkx as nx
 import numpy as np
 import torch
@@ -9,7 +9,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from gensim.models.keyedvectors import Vocab
 from six import iteritems
-from sklearn.metrics import auc, f1_score, precision_recall_curve, roc_auc_score
+from sklearn.metrics import (auc, f1_score, precision_recall_curve,
+                             roc_auc_score)
 from tqdm import tqdm
 
 from cogdl import options
@@ -258,9 +259,8 @@ class LinkPrediction(BaseTask):
         self.train_data, self.valid_data, self.test_data = divide_data(
             edge_list, [0.85, 0.05, 0.10]
         )
-        num_nodes = self.data.y.shape[0]
         from collections import defaultdict
-        out_degrees = np.zeros(num_nodes)
+        out_degrees = defaultdict(int)
         for x, y in self.train_data:
             out_degrees[x] += 1
             out_degrees[y] += 1

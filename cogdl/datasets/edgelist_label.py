@@ -2,8 +2,8 @@ import json
 import os
 import os.path as osp
 import sys
-from itertools import product
 from collections import defaultdict
+from itertools import product
 
 import networkx as nx
 import numpy as np
@@ -92,11 +92,10 @@ class DBLP(EdgelistLabel):
 
 
 class Edgelist(Dataset):
-
     def __init__(self, root, name):
         self.name = name
-        edge_list_path = os.path.join(root, name + '.edgelist')
-        node_label_path = os.path.join(root, name + '.nodelabel')
+        edge_list_path = os.path.join(root, name + ".edgelist")
+        node_label_path = os.path.join(root, name + ".nodelabel")
         edge_index, y = self._preprocess(edge_list_path, node_label_path)
         self.data = Data(x=None, edge_index=edge_index, y=y)
         self.transform = None
@@ -117,7 +116,7 @@ class Edgelist(Dataset):
                 if y not in node2id:
                     node2id[y] = len(node2id)
                 edge_list.append([node2id[x], node2id[y]])
-        
+
         num_nodes = len(node2id)
         with open(node_label_path) as f:
             nodes = []
@@ -138,14 +137,16 @@ class Edgelist(Dataset):
 @register_dataset("usa_airport")
 class USAAirport(Edgelist):
     def __init__(self):
-        super().__init__('../cogdl/data/struc2vec/graph/', 'usa-airports')
+        super().__init__("../cogdl/data/struc2vec/graph/", "usa-airports")
+
 
 @register_dataset("brazil_airport")
 class BrazilAirport(Edgelist):
     def __init__(self):
-        super().__init__('../cogdl/data/struc2vec/graph/', 'brazil-airports')
+        super().__init__("../cogdl/data/struc2vec/graph/", "brazil-airports")
+
 
 @register_dataset("europe_airport")
 class EuropeAirport(Edgelist):
     def __init__(self):
-        super().__init__('../cogdl/data/struc2vec/graph/', 'europe-airports')
+        super().__init__("../cogdl/data/struc2vec/graph/", "europe-airports")

@@ -10,7 +10,7 @@ import torch
 import torch.nn.functional as F
 from scipy import sparse as sp
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import f1_score, accuracy_score
+from sklearn.metrics import accuracy_score, f1_score
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.utils import shuffle as skshuffle
 from tqdm import tqdm
