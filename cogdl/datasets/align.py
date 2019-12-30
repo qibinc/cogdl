@@ -54,32 +54,32 @@ class AlignSingleDataset(Dataset):
 @register_dataset("kdd")
 class KDD(AlignSingleDataset):
     def __init__(self):
-        super().__init__("../cogdl/data/align/", "kdd")
+        super().__init__("../cogdl/data/panther/", "kdd")
 
 @register_dataset("icdm")
 class ICDM(AlignSingleDataset):
     def __init__(self):
-        super().__init__("../cogdl/data/align/", "icdm")
+        super().__init__("../cogdl/data/panther/", "icdm")
 
 @register_dataset("sigir")
 class SIGIR(AlignSingleDataset):
     def __init__(self):
-        super().__init__("../cogdl/data/align/", "sigir")
+        super().__init__("../cogdl/data/panther/", "sigir")
 
 @register_dataset("cikm")
 class CIKM(AlignSingleDataset):
     def __init__(self):
-        super().__init__("../cogdl/data/align/", "cikm")
+        super().__init__("../cogdl/data/panther/", "cikm")
 
 @register_dataset("sigmod")
 class SIGMOD(AlignSingleDataset):
     def __init__(self):
-        super().__init__("../cogdl/data/align/", "sigmod")
+        super().__init__("../cogdl/data/panther/", "sigmod")
 
 @register_dataset("icde")
 class ICDE(AlignSingleDataset):
     def __init__(self):
-        super().__init__("../cogdl/data/align/", "icde")
+        super().__init__("../cogdl/data/panther/", "icde")
 
 @register_dataset("align")
 class AlignDataset(Dataset):
@@ -135,15 +135,15 @@ class AlignDataset(Dataset):
 @register_dataset("kdd_icdm")
 class KDDICDM(AlignDataset):
     def __init__(self):
-        super().__init__("../cogdl/data/align/", "kdd", "icdm")
+        super().__init__("../cogdl/data/panther/", "kdd", "icdm")
 
 @register_dataset("sigir_cikm")
 class SIGIRCIKM(AlignDataset):
     def __init__(self):
-        super().__init__("../cogdl/data/align/", "sigir", "cikm")
+        super().__init__("../cogdl/data/panther/", "sigir", "cikm")
 
 @register_dataset("sigmod_icde")
 class KDDICDM(AlignDataset):
     def __init__(self):
-        super().__init__("../cogdl/data/align/", "sigmod", "icde")
+        super().__init__("../cogdl/data/panther/", "sigmod", "icde")
         

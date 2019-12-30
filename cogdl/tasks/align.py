@@ -81,8 +81,6 @@ class Align(BaseTask):
             idxs = scores.argsort()[::-1]
             for k in k_list:
                 all_results[k].append(int(reindex_dict[dict_2[key]] in idxs[:k]))
-            if key == "jie tang":
-                print(list(map(lambda x: id2name[reindex[x]], idxs[:k])))
 
         return dict(
             (

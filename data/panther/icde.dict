@@ -1,0 +1,2559 @@
+michael stonebraker	0
+ugur cetintemel	1
+pat selinger	2
+yoji taniguchi	3
+nobutoshi sagawa	4
+graham cormode	5
+flip korn	6
+s. muthukrishnan	7
+divesh srivastava	8
+a. pavan	9
+srikanta tirthapura	10
+ahmet bulut	11
+ambuj k. singh	12
+jayant madhavan	13
+philip a. bernstein	14
+anhai doan	15
+alon halevy	16
+alexander bilke	17
+felix naumann	18
+yannis velegrakis	19
+renee j. miller	20
+john mylopoulos	21
+tanu malik	22
+randal burns	23
+amitabh chaudhary	24
+hao he	25
+junyi xie	26
+jun yang	27
+hai yu	28
+shivnath babu	29
+kamesh munagala	30
+jennifer widom	31
+rajeev motwani	32
+yannis kotidis	33
+frederick reiss	34
+joseph m. hellerstein	35
+amol deshpande	36
+carlos guestrin	37
+wei hong	38
+samuel madden	39
+ramakrishna gummadi	40
+xin li	41
+ramesh govindan	42
+cyrus shahabi	43
+yasushi sakurai	44
+spiros papadimitriou	45
+christos faloutsos	46
+amelie marian	47
+sihem amer-yahia	48
+nick koudas	49
+wolf-tilo balke	50
+wolfgang nejdl	51
+wolf siberski	52
+uwe thaden	53
+man lung yiu	54
+dimitris papadias	55
+nikos mamoulis	56
+yufei tao	57
+seung-won hwang	58
+kevin chen-chuan chang	59
+chee-yong chan	60
+pin-kwang eng	61
+kian-lee tan	62
+shipra agrawal	63
+jayant r. haritsa	64
+benjamin c.  m. fung	65
+ke wang	66
+philip s. yu	67
+roberto j. bayardo	68
+rakesh agrawal	69
+c. amza	70
+a. l. cox	71
+w. zwaenepoel	72
+olga papaemmanouil	73
+egemen tanin	74
+aaron harwood	75
+hanan samet	76
+prasanna ganesan	77
+qixiang sun	78
+hector garcia-molina	79
+liangzhong yin	80
+guohong cao	81
+peter buneman	82
+byron choi	83
+wenfei fan	84
+robert hutchison	85
+robert mann	86
+stratis d. viglas	87
+maya ramanath	88
+lingzhi zhang	89
+juliana freire	90
+adam silberstein	91
+ke yi	92
+lin guo	93
+jayavel shanmugasundaram	94
+kevin beyer	95
+eugene shekita	96
+yongluan zhou	97
+beng chin ooi	98
+ali pinar	99
+tao tao	100
+hakan ferhatosmanoglu	101
+sotiris brakatsoulas	102
+dieter pfoser	103
+nectaria tryfona	104
+apurva kumar	105
+kevin y. yip	106
+david w. cheung	107
+michael k. ng	108
+aristides gionis	109
+heikki mannila	110
+panayiotis tsaparas	111
+jian pei	112
+daxin jiang	113
+aidong zhang	114
+mohammed j. zaki	115
+markus peters	116
+xifeng yan	117
+x. jasmine zhou	118
+jiawei han	119
+ralf schenkel	120
+anja theobald	121
+gerhard weikum	122
+haixun wang	123
+xiaofeng meng	124
+li chen	125
+amarnath gupta	126
+m. erdem kurul	127
+kazuhito kobayashi	128
+wenxin wenxin	129
+dai kobayashi	130
+akitsugu watanabe	131
+haruo yokota	132
+ning zhang	133
+shishir k. agrawal	134
+m. tamer ozsu	135
+reynold cheng	136
+yuni xia	137
+sunil prabhakar	138
+rahul shah	139
+haibo hu	140
+jianliang xu	141
+wing sing wong	142
+baihua zheng	143
+dik lun lee	144
+wang-chien lee	145
+kwong yuen lai	146
+zahir tari	147
+peter bertok	148
+rajkumar sen	149
+krithi ramamritham	150
+shuqing wu	151
+bettina kemme	152
+liuba shrira	153
+hao xu	154
+david t. mcwherter	155
+bianca schroeder	156
+anastassia ailamaki	157
+mor harchol-balter	158
+maurice van keulen	159
+ander de keijzer	160
+wouter alink	161
+stavros polyviou	162
+george samaras	163
+paraskevas evripidou	164
+feng shao	165
+antal novak	166
+joachim hammer	167
+mike stonebraker	168
+oguzhan topsakal	169
+robert mccann	170
+alexander kramnik	171
+warren shen	172
+vanitha varadarajan	173
+olu sobulo	174
+thomas neumann	175
+sven helmer	176
+guido moerkotte	177
+hwanjo yu	178
+markus schneider	179
+xuemin lin	180
+yidong yuan	181
+wei wang	182
+hongjun lu	183
+yong shi	184
+elisa bertino	185
+yanjiang yang	186
+robert h. deng	187
+bradley malin	188
+edoardo airoldi	189
+samuel edoho-eket	190
+yiheng li	191
+jaideep vaidya	192
+chris clifton	193
+b. carminati	194
+e. ferrari	195
+e. bertino	196
+jin-ha kim	197
+gyu sang choi	198
+chita r. das	199
+songting chen	200
+elke a. rundensteiner	201
+alkis simitsis	202
+panos vassiliadis	203
+timos sellis	204
+ying chen	205
+frank dehne	206
+todd eavis	207
+andrew rau-chaplin	208
+bin liu	209
+xiaolei li	210
+xiaoxin yin	211
+dong xin	212
+saikat mukherjee	213
+i. v. ramakrishnan	214
+amarjeet singh	215
+gabriel pui cheong fung	216
+jeffrey xu yu	217
+panagiotis g. ipeirotis	218
+alexandros ntoulas	219
+junghoo cho	220
+luis gravano	221
+michael e. houle	222
+jun sakuma	223
+xiaohui yu	224
+ken q. pu	225
+xiaopeng xiong	226
+mohamed f. mokbel	227
+walid g. aref	228
+mu su	229
+chi-hung chi	230
+vasileios megalooikonomou	231
+qiang wang	232
+guo li	233
+jian zhai	234
+qing li	235
+rajasekar krishnamurthy	236
+raghav kaushik	237
+jeffrey f. naughton	238
+matthias brantner	239
+carl-christian kanne	240
+edward hung	241
+yu deng	242
+v. s. subrahmanian	243
+yannis sismanis	244
+nick roussopoulos	245
+yangjun chen	246
+elena baralis	247
+tania cerquitelli	248
+silvia chiusano	249
+amit manjhi	250
+vladislav shkapenyuk	251
+kedar dhamdhere	252
+christopher olston	253
+jeong-hyon hwang	254
+magdalena balazinska	255
+alexander rasin	256
+stan zdonik	257
+ying xing	258
+lawrence l. you	259
+kristal t. pollack	260
+darrell d.  e. long	261
+koustuv dasgupta	262
+sugata ghosal	263
+rohit jain	264
+upendra sharma	265
+akshat verma	266
+georgia koutrika	267
+yannis ioannidis	268
+gang luo	269
+curt j. ellmann	270
+michael w. watzke	271
+surajit chaudhuri	272
+venkatesh ganti	273
+bingsheng he	274
+qiong luo	275
+xueqing gong	276
+weining qian	277
+ying yan	278
+aoying zhou	279
+peter m. fischer	280
+donald kossmann	281
+bruce e. martin	282
+wen-syan li	283
+vishal s. batra	284
+vijayshankar raman	285
+wei han	286
+k. selcuk candan	287
+inderpal narang	288
+t. malkemus	289
+s. padmanabhan	290
+b. bhattacharjee	291
+l. cranston	292
+tetsuya ikeda	293
+hiroko mano	294
+hideo itoh	295
+hiroshi takegawa	296
+takuya hiraoka	297
+shiroh horibe	298
+yasushi ogawa	299
+masaaki tanizaki	300
+kishiko maruyama	301
+shigeru shimada	302
+hiroyuki uchiyama	303
+makoto onizuka	304
+takashi honishi	305
+hisashi kashima	306
+tadashi tsumura	307
+tsuyoshi ide	308
+takahide nogayama	309
+ryo hirade	310
+hiroaki etoh	311
+takeshi fukuda	312
+muralidhar krishnaprasad	313
+zhen hua liu	314
+anand manikutty	315
+james w. warner	316
+vikas arora	317
+jose a. blakeley	318
+conor cunningham	319
+nigel ellis	320
+balaji rathakrishnan	321
+ming-chuan wu	322
+paul bird	323
+tyrone grandison	324
+jerry kiernan	325
+scott logan	326
+walid rjaibi	327
+tzi-cker chiueh	328
+dhruv pilania	329
+qingchun jiang	330
+raman adaikkalavan	331
+sharma chakravarthy	332
+lin qiao	333
+balakrishna r. iyer	334
+divyakant agrawal	335
+amr el abbadi	336
+wei jiang	337
+zahir balaporia	338
+brett banich	339
+jeonghee yi	340
+wayne niblack	341
+malu castellanos	342
+fabio casati	343
+ming-chien shan	344
+umesh dayal	345
+bin he	346
+zhen zhang	347
+mihaly jakob	348
+matthias grossmann	349
+nicola honle	350
+daniela nicklas	351
+akihiro kuwabara	352
+katsumi tanaka	353
+kyu-young whang	354
+min-jae lee	355
+jae-gil lee	356
+min-soo kim	357
+wook-shin han	358
+bill howe	359
+david maier	360
+osmar r. zaiane	361
+mohammad el-hajj	362
+yi li	363
+stella luk	364
+paolo atzeni	365
+paolo cappellari	366
+manfred reichert	367
+stefanie rinderle	368
+ulrich kreher	369
+peter dadam	370
+ralf hartmut guting	371
+victor almeida	372
+dirk ansorge	373
+thomas behr	374
+zhiming ding	375
+thomas hose	376
+frank hoffmann	377
+markus spiekermann	378
+ulrich telle	379
+yi chen	380
+susan b. davidson	381
+yifeng zheng	382
+francois bry	383
+fatih coskun	384
+serap durmaz	385
+tim furche	386
+dan olteanu	387
+markus spannagel	388
+serge abiteboul	389
+ioana manolescu	390
+nicoleta preda	391
+xiaochun yang	392
+chen li	393
+ge yu	394
+lei shi	395
+jimeng sun	396
+smriti yamini	397
+timothy edmunds	398
+subarna sadhukhan	399
+shinjiro sueda	400
+shu-ching chen	401
+mei-ling shyu	402
+na zhao	403
+tony griffiths	404
+alvaro a.  a. fernandes	405
+norman w. paton	406
+seung-hyun jeong	407
+nassima djafri	408
+keith t. mason	409
+yoshinori hara	410
+vishal sikka	411
+sang k. cha	412
+ihab f. ilyas	413
+gustavo alonso	414
+lei liu	415
+jiong yang	416
+anthony k.  h. tung	417
+vaclav lin	418
+vasilis vassalos	419
+prodromos malakasiotis	420
+bee-chung chen	421
+lei chen	422
+raghu ramakrishnan	423
+david r. musicant	424
+zheng shao	425
+hongyan liu	426
+paul g. brown	427
+peter j. haas	428
+anish das sarma	429
+omar benjelloun	430
+sudipto guha	431
+christian bohm	432
+alexey pryakhin	433
+matthias schubert	434
+evangelos kanoulas	435
+yang du	436
+tian xia	437
+donghui zhang	438
+ira assent	439
+andrea wenning	440
+thomas seidl	441
+joxan jaffar	442
+roland h. c. yap	443
+kenny q. zhu	444
+changqing li	445
+tok wang ling	446
+min hu	447
+christopher re	448
+jerome simeon	449
+mary fernandez	450
+nuwee wiwatwattana	451
+h. v. jagadish	452
+laks v.  s. lakshmanan	453
+yuelong jiang	454
+alexander tuzhilin	455
+ruoming jin	456
+gagan agrawal	457
+leo glimcher	458
+chris jermaine	459
+kristen lefevre	460
+david j. dewitt	461
+reza sherkat	462
+davood rafiei	463
+cristian estan	464
+ralf rantzau	465
+christoph mangold	466
+jun rao	467
+hamid pirahesh	468
+c. mohan	469
+guy lohman	470
+ashwin machanavajjhala	471
+johannes gehrke	472
+daniel kifer	473
+muthuramakrishnan venkitasubramaniam	474
+dmitri asonov	475
+murat kantarcioglu	476
+yaping li	477
+fatih emekci	478
+aziz gulbeden	479
+amit chandel	480
+p. c. nagesh	481
+sunita sarawagi	482
+imran r. mansuri	483
+periklis andritsos	484
+ariel fuxman	485
+ken pu	486
+vagelis hristidis	487
+fan yang	488
+mirek riedewald	489
+huiming qu	490
+alexandros labrinidis	491
+daniel mosse	492
+quang hieu vu	493
+rong zhang	494
+david lomet	495
+roger barga	496
+german shegalov	497
+albrecht schmidt	498
+christian s. jensen	499
+simonas saltenis	500
+arnd christian konig	501
+shubha u. nabar	502
+huahai he	503
+u. srivastava	504
+p. j. haas	505
+v. markl	506
+m. kutsch	507
+t. m. tran	508
+nikos ntarmos	509
+peter triantafillou	510
+philippe cudre-mauroux	511
+karl aberer	512
+andras feher	513
+benjamin arai	514
+gautam das	515
+dimitrios gunopulos	516
+vana kalogeraki	517
+stratos idreos	518
+christos tryfonopoulos	519
+manolis koubarakis	520
+wensheng wu	521
+clement yu	522
+ullas nambiar	523
+subbarao kambhampati	524
+eduard dragut	525
+prasad sistla	526
+weiyi meng	527
+ping wu	528
+ji-rong wen	529
+huan liu	530
+wei-ying ma	531
+david chu	532
+peter pietzuch	533
+jonathan ledlie	534
+jeffrey shneidman	535
+mema roussopoulos	536
+matt welsh	537
+margo seltzer	538
+xin zhou	539
+hetal thakkar	540
+carlo zaniolo	541
+ying zhang	542
+jian xu	543
+steven bird	544
+haejoong lee	545
+shuang hou	546
+h.-arno jacobsen	547
+hanyu li	548
+mong li lee	549
+wynne hsu	550
+gao cong	551
+feng yu	552
+wei zhuang	553
+jennifer l. beckmann	554
+alan halverson	555
+marcin zukowski	556
+sandor heman	557
+niels nes	558
+peter boncz	559
+arun iyengar	560
+erich nahum	561
+adam wierman	562
+ashraf aboulnaga	563
+cheng luo	564
+zhewei jiang	565
+wen-chi hou	566
+feng yan	567
+chih-fang wang	568
+neoklis polyzotis	569
+minos garofalakis	570
+nilesh dalvi	571
+xiaokui xiao	572
+zhiyong huang	573
+hua lu	574
+shouke qin	575
+adam silberstein silberstein	576
+rebecca braynard	577
+carla ellis	578
+yingqi xu	579
+gail mitchell	580
+dan lin	581
+rui zhang	582
+kit hung cheng	583
+jianyong wang	584
+zhiping zeng	585
+lizhu zhou	586
+junmei wang	587
+chang sheng	588
+hao he2	589
+ke deng	590
+heng tao shen	591
+kai xu	592
+praveen rao	593
+bongki moon	594
+feifei li	595
+ching chang	596
+george kollios	597
+azer bestavros	598
+floris geerts	599
+anastasios kementsietsidis	600
+diego milano	601
+hector gonzalez	602
+diego klabjan	603
+kien a. hua	604
+ning yu	605
+danzhou liu	606
+ken c. k. lee	607
+hong va leong	608
+subramanian arumugam	609
+christopher jermaine	610
+sandeep tata	611
+james s. friedman	612
+anand swaroop	613
+feida zhu	614
+xin xu	615
+ying lu	616
+stefan seltzsam	617
+daniel gmach	618
+stefan krompass	619
+alfons kemper	620
+asuman dogac	621
+veli bicer	622
+alper okcan	623
+christopher johnson	624
+frank leymann	625
+nicole alexander	626
+siva ravada	627
+huajun chen	628
+zhaohui wu	629
+heng wang	630
+yuxin mao	631
+eugene inseok chong	632
+souripriya das	633
+george eadon	634
+jagannathan srinivasan	635
+fusheng wang	636
+peiya liu	637
+john pearson	638
+fred azar	639
+gerald madlmayr	640
+sunil jigyasu	641
+sujeet banerjee	642
+vinayak borkar	643
+michael carey	644
+kanad dixit	645
+anil malkani	646
+sachin thatte	647
+a. kumaran	648
+pavan k. chowdary	649
+antti-pekka liedes	650
+antoni wolski	651
+mohamed y. eltabakh	652
+ramy eltarras	653
+ganesh ramakrishnan	654
+sachindra joshi	655
+sumit negi	656
+raghu krishnapuram	657
+sreeram balakrishnan	658
+daniel c. zilio	659
+mahadevan subramanian	660
+calisto zuzarte	661
+naga k. govindaraju	662
+dinesh manocha	663
+michael morse	664
+jignesh m. patel	665
+william i. grosky	666
+melanie weis	667
+charu c. aggarwal	668
+chen chen	669
+yiping ke	670
+james cheng	671
+wilfred ng	672
+xiaoming jin	673
+xinqiang zuo	674
+kwok-yan lam	675
+jianmin wang	676
+jiaguang sun	677
+alberto trombetta	678
+sergei evdokimov	679
+matthias fischmann	680
+oliver gunther	681
+latanya sweeney	682
+basit shafiq	683
+arjmand samuel	684
+arif ghafoor	685
+wei zhang	686
+neil smalheiser	687
+vetle torvik	688
+dou shen	689
+jian-tao sun	690
+qiang yang	691
+hui zhao	692
+zheng chen	693
+weifeng su	694
+jiying wang	695
+frederick lochovsky	696
+zaiqing nie	697
+fei wu2	698
+andreas wombacher	699
+magesh jayapandian	700
+ling wang	701
+murali mani	702
+simon sheu	703
+nigel wu	704
+maged el-sayed	705
+zeeshan sardar	706
+farnoush banaei-kashani	707
+prasanna pabmanabhan	708
+le gruenwald	709
+mihai lupu	710
+bei yu	711
+damdinsuren amarmend	712
+masayoshi aritsugi	713
+yoshinari kanamori	714
+ouri wolfson	715
+bo xu	716
+huabei yin	717
+hu cao	718
+michael cammert	719
+jurgen kramer	720
+bernhard seeger	721
+sonny vaupel	722
+john hershberger	723
+nisheeth shrivastava	724
+subhash suri	725
+dongdong zhang	726
+jianzhong li	727
+kimutai kimeli	728
+weiping wang	729
+shawn r. jeffery	730
+michael j. franklin	731
+esther ryvkina	732
+anurag s. maskey	733
+mitch cherniack	734
+ahmed ayad	735
+jeffrey naughton	736
+stephen wright	737
+utkarsh srivastava	738
+minji wu	739
+xueyan tang	740
+vebjorn ljosa	741
+arnab bhattacharya	742
+xin zhang	743
+dennis shasha	744
+matthew denny	745
+dina goldin	746
+johannes assfalg	747
+hans-peter kriegel	748
+peer kroger	749
+peter kunath	750
+matthias renz	751
+shantanu joshi	752
+sourav s. bhowmick	753
+sandeep prakash	754
+khuzaima daudjee	755
+kenneth salem	756
+yihua wu	757
+govi govindarajan	758
+leo mark	759
+arjen p. de vries	760
+mohammed k. jaber	761
+andrei voronkov	762
+luca cabibbo	763
+ivan panella	764
+riccardo torlone	765
+wei-shinn ku	766
+roger zimmermann	767
+chi-ngai wan	768
+haojun wang	769
+shuigeng zhou	770
+zheng zhang	771
+kun gao	772
+stavros harizopoulos	773
+ippokratis pandis	774
+jagan sankaranarayanan	775
+houman alborzi	776
+y. chen	777
+a. rau-chaplin	778
+f. dehne	779
+t. eavis	780
+d. green	781
+e. sithirasenan	782
+anastasios gounaris	783
+rizos sakellariou	784
+alvaro a. a. fernandes	785
+jim smith	786
+paul watson	787
+martin pfeifle	788
+chang-tien lu	789
+arnold p. boedihardjo	790
+jinping zheng	791
+christoph heinz	792
+tobias riemenschneider	793
+maxim schwarzkopf	794
+alexander zeiss	795
+jialie shen	796
+john shepherd	797
+bin cui	798
+mariano p. consens	799
+john w. s. liu	800
+bill o'farrell	801
+sriram mohan	802
+jonathan klinginsmith	803
+arijit sengupta	804
+yuqing wu	805
+percy bernedo	806
+prasanna padmanabhan	807
+francesco bonchi	808
+fosca giannotti	809
+claudio lucchese	810
+salvatore orlando	811
+raffaele perego	812
+roberto trasarti	813
+madhav nori	814
+ben lee	815
+yanif ahmad	816
+jennie rogers	817
+luping ding	818
+junichi tatemura	819
+wang-pin hsiung	820
+mi zhou	821
+man hon wong	822
+mikhail j. atallah	823
+younsun cho	824
+ashish kundu	825
+zhengli huang	826
+wenliang du	827
+petko bakalov	828
+erik hoel	829
+wee-liang heng	830
+vassilis j. tsotras	831
+himanshu agrawal	832
+girish chafle	833
+sunil goyal	834
+sumit mittal	835
+sougata mukherjea	836
+zhe wu	837
+melliyal annamalai	838
+stefan dessloch	839
+mauricio a. hernandez	840
+ryan wisnesky	841
+ahmed radwan	842
+jindan zhou	843
+kai zhao	844
+robert ikeda	845
+michael n. gubanov	846
+alexander moshchuk	847
+gabriel ghinita	848
+panos kalnis	849
+jiexing li	850
+mummoorthy murugesan	851
+luo si	852
+arnon mazza	853
+tamir tassa	854
+lisa hellerstein	855
+theoni pitoura	856
+yipu wu	857
+jing chen	858
+alejandro buchmann	859
+arbee chen	860
+luis von ahn	861
+martin l. kersten	862
+zachary g. ives	863
+nicholas e. taylor	864
+suman nath	865
+song lin	866
+nikolaus augsten	867
+michael bohlen	868
+curtis dyreson	869
+johann gamper	870
+zheng liu	871
+ di wu	872
+jure ferlez	873
+jure leskovec	874
+dunja mladenic	875
+marko grobelnik	876
+cecilia m. procopiuc	877
+l. v. s. lakshmanan	878
+a. russakovsky	879
+v. sashikanth	880
+feng pan	881
+xiang zhang	882
+miron livny	883
+bogdan alexe	884
+laura chiticariu	885
+wang-chiew tan	886
+hazem elmeleegy	887
+mourad ouzzani	888
+ahmed elmagarmid	889
+alessandro raffio	890
+daniele braga	891
+stefano ceri	892
+paolo papotti	893
+arvind arasu	894
+andrea cali	895
+davide martinenghi	896
+hung v. nguyen	897
+hasan davulcu	898
+michail vlachos	899
+deepak rajan	900
+minghua chen	901
+aleksandra korolova	902
+ying xu	903
+anna cinzia squicciarini	904
+ivan paloscia	905
+mohamed nabeel	906
+rinku dewri	907
+indrajit ray	908
+indrakshi ray	909
+darrell whitley	910
+garret swart	911
+vijay dialani	912
+richard sidle	913
+hoyoung jeung	914
+qing liu	915
+xiaofang zhou	916
+yueguo chen	917
+shouxu jiang	918
+anthony k. h. tung	919
+panagiotis karras	920
+lorenzo bossi	921
+nicolas anciaux	922
+luc bouganim	923
+harold van heerde	924
+philippe pucheral	925
+peter m.  g. apers	926
+jianneng cao	927
+barbara carminati	928
+elena ferrari	929
+kian lee tan	930
+kanthi nagaraj	931
+k. v. m. naidu	932
+rajeev rastogi	933
+scott satkin	934
+xiaohui gu	935
+shu-ping chang	936
+bing tian dai	937
+suresh venkatasubramanian	938
+daniel gyllstrom	939
+jagrati agrawal	940
+yanlei diao	941
+neil immerman	942
+shyam antony	943
+philipp rosch	944
+rainer gemulla	945
+wolfgang lehner	946
+ming hua	947
+wenjie zhang	948
+xuedong chen	949
+patrick o'neil	950
+elizabeth o'neil	951
+milena ivanova	952
+mengsheng zhang	953
+jinze liu	954
+hong cheng	955
+barzan mozafari	956
+mumtaz ahmad	957
+rishi rakesh sinha	958
+marianne winslett	959
+kesheng wu	960
+kurt stockinger	961
+arie shoshani	962
+akrivi vlachou	963
+christos doulkeridis	964
+kjetil norvag	965
+michalis vazirgiannis	966
+jan sedmidubsky	967
+stanislav barton	968
+vlastislav dohnal	969
+pavel zezula	970
+vassilis stoumpos	971
+antonios deligiannakis	972
+alex delis	973
+deng cai	974
+xiaofei he	975
+erik vee	976
+prashant bhat	977
+sihem amer yahia	978
+david j. martin	979
+joseph y. halpern	980
+jiaheng lu	981
+yiming lu	982
+mirit shalem	983
+ziv bar-yossef	984
+iman elghandour	985
+fei chiang	986
+andrey balmin	987
+mohammed eunus ali	988
+lars kulik	989
+justin j. levandoski	990
+mohamed e. khalefa	991
+ixent galpin	992
+christian y. a. brenninkmeijer	993
+farhana jabeen	994
+qun chen	995
+zhanhuai li	996
+hailong liu	997
+richard cocci	998
+thanh tran	999
+prashant shenoy	1000
+tim schmidt	1001
+yunjun gao	1002
+jing zhang	1003
+gencai chen	1004
+shen liu	1005
+chun chen	1006
+marios hadjieleftheriou	1007
+john abowd	1008
+lars vilhuber	1009
+dilys thomas	1010
+haibing lu	1011
+vijayalakshmi atluri	1012
+marc wichterich	1013
+tobias meisen	1014
+kotagiri ramamohanarao	1015
+nan tang	1016
+kam-fai wong	1017
+ramakrishna varadarajan	1018
+louiqa raschid	1019
+yibin chen	1020
+yong liu	1021
+hong gao	1022
+sriram raghavan	1023
+huaiyu zhu	1024
+shivakumar vaithyanathan	1025
+xiang lian	1026
+haggai roitman	1027
+avigdor gal	1028
+songyun duan	1029
+vassilis athitsos	1030
+michalis potamias	1031
+panagiotis papapetrou	1032
+ling hu	1033
+brent bryan	1034
+frederick eberhardt	1035
+muhammed miah	1036
+jiefeng cheng	1037
+bolin ding	1038
+shixi chen	1039
+fei chen	1040
+gjergji kasneci	1041
+fabian m. suchanek	1042
+georgiana ifrim	1043
+yuanyuan tian	1044
+ross shaull	1045
+sebastian obermeier	1046
+stefan bottcher	1047
+martin hett	1048
+panos k. chrysanthis	1049
+nodira khoussainova	1050
+dan suciu	1051
+dan wang	1052
+jiangchuan liu	1053
+feng wang	1054
+atsuyuki morishima	1055
+akiyoshi nakamizo	1056
+toshinari iida	1057
+shigeo sugimoto	1058
+hiroyuki kitagawa	1059
+amit pathak	1060
+soumen chakrabarti	1061
+manish gupta	1062
+houtan shirani-mehr	1063
+gang liang	1064
+michal shmueli-scheuer	1065
+ravi kumar	1066
+kevin lang	1067
+cameron marlow	1068
+andrew tomkins	1069
+xuegang huang	1070
+osman abul	1071
+mirco nanni	1072
+bugra gedik	1073
+kun-lung wu	1074
+jinchuan chen	1075
+mohamed mokbel	1076
+chi-yin chow	1077
+lyublena antova	1078
+thomas jansen	1079
+christoph koch	1080
+aameek singh	1081
+ling liu	1082
+supratim deb	1083
+prakash linga	1084
+anand srinivasan	1085
+vivek narasayya	1086
+ravishankar ramamurthy	1087
+hoa nguyen	1088
+eun yong kang	1089
+ziyang liu	1090
+loredana afanasiev	1091
+torsten grust	1092
+maarten marx	1093
+jan rittinger	1094
+jens teubner	1095
+fatma ozcan	1096
+ashutosh singh	1097
+edison ting	1098
+rimma v. nehme	1099
+thomas phan	1100
+christian thomsen	1101
+torben bach pedersen	1102
+martin theobald	1103
+robert krauthgamer	1104
+aranyak mehta	1105
+atri rudra	1106
+shetal shah	1107
+sarvjeet singh	1108
+chris mayfield	1109
+susanne hambrusch	1110
+jennifer neville	1111
+mark a. iwen	1112
+willis lang	1113
+georgia koloniari	1114
+evaggelia pitoura	1115
+flavio rizzolo	1116
+alejandro a. vaisman	1117
+judice l.  y. koh	1118
+wee tiong ang	1119
+fernando farfan	1120
+anand ranganathan	1121
+redmond p. burke	1122
+theodore johnson	1123
+oliver spatscheck	1124
+lipyeow lim	1125
+bishwaranjan bhattacharjee	1126
+linfeng zhang	1127
+yong guan	1128
+tiancheng li	1129
+ninghui li	1130
+wisam dakka	1131
+yuguo chen	1132
+anirban majumder	1133
+ali inan	1134
+monica scannapieco	1135
+olivier biton	1136
+sarah cohen-boulakia	1137
+carmem s. hara	1138
+yin yang	1139
+stavros papadopoulos	1140
+periklis georgiadis	1141
+ioannis kapantaidakis	1142
+vassilis christophides	1143
+elhadji mamadou nguer	1144
+nicolas spyratos	1145
+michael d. lieberman	1146
+carsten binnig	1147
+eric lo	1148
+angel saenz-badillos	1149
+murthy devarakonda	1150
+nithya rajamani	1151
+wlodek zadrozny	1152
+m. s. ali	1153
+shahan khatchadourian	1154
+yi luo	1155
+pablo castro	1156
+anil nori	1157
+stacy patterson	1158
+bassam bamieh	1159
+bin zhou	1160
+loreto bravo	1161
+shuai ma	1162
+srinivas kashyap	1163
+jeyashankher ramamirtham	1164
+pushpraj shukla	1165
+lei zou	1166
+quanqing xu	1167
+lijiang chen	1168
+yafei dai	1169
+qi zhang	1170
+tingjian ge	1171
+bhargav kanagal	1172
+s. abiteboul	1173
+i. manolescu	1174
+s. zoupanos	1175
+sandeep gupta	1176
+christopher condit	1177
+bogdan marinoiu	1178
+pierre bourhis	1179
+jianlong chang	1180
+dai dai	1181
+marko vrhovnik	1182
+oliver suhre	1183
+stephan ewen	1184
+holger schwarz	1185
+marcin kwietniewski	1186
+stephanie wilson	1187
+anna topol	1188
+sunbir gill	1189
+jarek gryz	1190
+michael jenkin	1191
+piotr jasiobedzki	1192
+ho-kong ng	1193
+mohammad alomari	1194
+michael cahill	1195
+alan fekete	1196
+uwe rohm	1197
+xiaodan wang	1198
+andreas terzis	1199
+christos yfoulis	1200
+marios d. dikaiakos	1201
+ting wang	1202
+lewis girod	1203
+yuan mei	1204
+ryan newton	1205
+stanislav rost	1206
+arvind thiagarajan	1207
+hari balakrishnan	1208
+cesar a. galindo-legaria	1209
+torsten grabs	1210
+sreenivas gukal	1211
+steve herbert	1212
+aleksandras surna	1213
+shirley wang	1214
+wei yu	1215
+peter zabback	1216
+shin zhang	1217
+prashant pandey	1218
+david chambliss	1219
+gene fuh	1220
+james ruddy	1221
+ying-lin chen	1222
+kou-horng yang	1223
+fen-ling lin	1224
+shweta bajpai	1225
+christopher peery	1226
+thu d. nguyen	1227
+matthias bohm	1228
+dirk habich	1229
+uwe wloka	1230
+ahmed k. elmagarmid	1231
+yasin laura-silva	1232
+muhammad u. arshad	1233
+david salt	1234
+ivan baxter	1235
+andrew campen	1236
+dan rigsby	1237
+ying guo	1238
+xingdong feng	1239
+eric w. su	1240
+mathew palakal	1241
+shuyu li	1242
+hendrik blockeel	1243
+toon calders	1244
+elisa fromont	1245
+bart goethals	1246
+adriana prado	1247
+mei wang	1248
+hongtao xu	1249
+guoyu hao	1250
+xiangdong zhou	1251
+baile shi	1252
+chong sun	1253
+leonidas fegaras	1254
+stefanie scherzinger	1255
+michael schmidt	1256
+alpa jain	1257
+pedro derose	1258
+xiaoyong chai	1259
+byron j. gao	1260
+philip bohannon	1261
+xiaojin zhu	1262
+ian de felipe	1263
+naphtali rishe	1264
+cornelius rabsch	1265
+daniel engovatov	1266
+dmitry lychagin	1267
+till westmann	1268
+warren wong	1269
+vladimir kolovski	1270
+nicolas bruno	1271
+srini acharya	1272
+cesar galindo-legaria	1273
+milind joshi	1274
+babu krishnaswamy	1275
+stefano stefani	1276
+pawel terlecki	1277
+sylvia radeschutz	1278
+bernhard mitschang	1279
+m. bhide	1280
+v. chakravarthy	1281
+a. gupta	1282
+h. gupta	1283
+m. mohania	1284
+k. puniyani	1285
+p. roy	1286
+s. roy	1287
+v. sengar	1288
+johannes abfalg	1289
+sanjeet khaitan	1290
+anup chalamalla	1291
+ji zhang	1292
+qigang gao	1293
+hai wang	1294
+david carlson	1295
+jian zhang	1296
+zutao zhu	1297
+guan wang	1298
+mauro sozio	1299
+liangcai shu	1300
+bo long	1301
+ling ding	1302
+yasin n. silva	1303
+mohamed h. ali	1304
+chuan xiao	1305
+haichuan shang	1306
+lei zhang	1307
+bing liu	1308
+jeffrey benkler	1309
+chi zhou	1310
+michael blow	1311
+christopher hillery	1312
+alexander kotopoulis	1313
+radu preotiuc-pietro	1314
+panagiotis reveliotis	1315
+joshua spiegel	1316
+qi he	1317
+zhen liao	1318
+steven c.  h. hoi	1319
+kuiyu chang	1320
+ee-peng lim	1321
+hang li	1322
+abhay mehta	1323
+chetan gupta	1324
+song wang	1325
+senjuti basu roy	1326
+haidong wang	1327
+mukesh mohania	1328
+wentian lu	1329
+gerome miklau	1330
+yao wu	1331
+heasoo hwang	1332
+berthold reinwald	1333
+erik nijkamp	1334
+cristian duda	1335
+gianni frey	1336
+reto matter	1337
+chong zhou	1338
+yosi mass	1339
+maria vanina martinez	1340
+gerardo i. simari	1341
+christopher ré	1342
+xiaoyan yang	1343
+benjamin bercovitz	1344
+filip kaliszan	1345
+henry liou	1346
+amit goyal	1347
+byung-won on	1348
+ke yang	1349
+yinan li	1350
+pedro v. sander	1351
+jiaoying shi	1352
+ohad greenshpan	1353
+tova milo	1354
+ching-yung lin	1355
+nan cao	1356
+shi xia liu	1357
+dmitri v. kalashnikov	1358
+zhaoqi chen	1359
+rabia nuray-turan	1360
+sharad mehrotra	1361
+qihong shao	1362
+peng sun	1363
+arnd christian könig	1364
+kenneth church	1365
+martin markov	1366
+charu aggarwal	1367
+navendu jain	1368
+praveen yalagandula	1369
+mike dahlin	1370
+yin zhang	1371
+mirco stern	1372
+erik buchmann	1373
+klemens böhm	1374
+bojian xu	1375
+bin jiang	1376
+panayiotis andreou	1377
+demetrios zeinalipour-yazti	1378
+martha vassiliadou	1379
+sebastian michel	1380
+ali salehi	1381
+liqian luo	1382
+nicholas dawes	1383
+guillermo barrenetxea	1384
+mathias bavay	1385
+aman kansal	1386
+k. ashwin kumar	1387
+marc parlange	1388
+stewart tansley	1389
+catharine van ingen	1390
+feng zhao	1391
+zi huang	1392
+liping wang	1393
+jie shao	1394
+yu-ling hsueh	1395
+chung-dau wang	1396
+wenchao zhou	1397
+yun mao	1398
+boon thau loo	1399
+martín abadi	1400
+soumyadeb mitra	1401
+richard t. snodgrass	1402
+shashank yaduvanshi	1403
+sumedh ambokar	1404
+boris glavic	1405
+weixiong rao	1406
+ada wai-chee fu	1407
+hanhua chen	1408
+david lo	1409
+siau-cheng khoo	1410
+gang chen	1411
+ke chen	1412
+ugur Çetintemel	1413
+john jannotti	1414
+sarana nutanong	1415
+carlo a. curino	1416
+hyun j. moon	1417
+myungwon ham	1418
+jorge-arnulfo quiané-ruiz	1419
+philippe lamarre	1420
+patrick valduriez	1421
+zhou yong	1422
+erwin leonardi	1423
+k. g. widjanarko	1424
+peter franklin	1425
+vamsidhar thummala	1426
+dongdong zhao	1427
+boduo li	1428
+mei hui	1429
+thomas hornung	1430
+georg lausen	1431
+christoph pinkel	1432
+risi thonangi	1433
+julie letchner	1434
+matthai philipose	1435
+charles sutton	1436
+yanming nie	1437
+mengmeng liu	1438
+yabo xu	1439
+ada w.  c. fu	1440
+raymond c.  w. wong	1441
+ivo jimenez	1442
+neal coddington	1443
+hans zeller	1444
+steven whang	1445
+umeshwar dayal	1446
+jon olav hauglid	1447
+kjetil nørvåg	1448
+norvald h. ryeng	1449
+peter mork	1450
+len seligman	1451
+arnon rosenthal	1452
+chris wolf	1453
+jeff hoyt	1454
+ken smith	1455
+jalaja padma	1456
+peer kröger	1457
+andreas züfle	1458
+alexander katzdobler	1459
+manish bhide	1460
+venkatesan t. chakaravarthy	1461
+prasan roy	1462
+himanshu gupta	1463
+xianjin zhu	1464
+xiang xu	1465
+hu xu	1466
+shazia sadiq	1467
+yansheng lu	1468
+weiwei cheng	1469
+zhengdao xu	1470
+hans-arno jacobsen	1471
+ami eyal	1472
+mu-woong lee	1473
+xinpeng zhang	1474
+yasuhito asano	1475
+masatoshi yoshikawa	1476
+georgios john fakas	1477
+zhi cai	1478
+bassam helou	1479
+jian huang	1480
+cong yu	1481
+mohamed a. soliman	1482
+arjun dasgupta	1483
+nan zhang	1484
+uwe röhm	1485
+rui wang	1486
+betty salzberg	1487
+shenoda guirguis	1488
+mohamed a. sharaf	1489
+kirk pruhs	1490
+haofen wang	1491
+sebastian rudolph	1492
+philipp cimiano	1493
+alexander markowetz	1494
+manuel mayr	1495
+aiyou chen	1496
+jin cao	1497
+charles garrod	1498
+bruce m. maggs	1499
+todd c. mowry	1500
+anthony tomasic	1501
+royi ronen	1502
+oded shmueli	1503
+bo luo	1504
+dongwon lee	1505
+seok-chul baek	1506
+sukwon kang	1507
+hyung noh	1508
+sang-wook kim	1509
+matthew hurst	1510
+alexey maykov	1511
+sung hyuk park	1512
+sang pil han	1513
+soon young huh	1514
+hojin lee	1515
+xiaoning ding	1516
+song jiang	1517
+xiaodong zhang	1518
+florin rusu	1519
+alin dobra	1520
+changliang wang	1521
+guoliang li	1522
+jianhua feng	1523
+kyriakos mouratidis	1524
+hweehwa pang	1525
+xiangmin zhou	1526
+athman bouguettaya	1527
+john a. taylor	1528
+daniel deutch	1529
+lu qin	1530
+lijun chang	1531
+ken c.  k. lee	1532
+peter benjamin volk	1533
+frank rosenthal	1534
+martin hahmann	1535
+biao qin	1536
+yicheng tu	1537
+chen zhang	1538
+ming gao	1539
+yawen li	1540
+guoren wang	1541
+junchang xin	1542
+ende zhang	1543
+zeling qiu	1544
+bo wang	1545
+yan jia	1546
+yi han	1547
+weihong han	1548
+carson kai-sang leung	1549
+boyu hao	1550
+smith tsang	1551
+ben kao	1552
+wai-shing ho	1553
+sau dan lee	1554
+utku irmak	1555
+vadim von brzeski	1556
+reiner kraft	1557
+ravi ramamurthy	1558
+mihaela a. bornea	1559
+lukasz golab	1560
+tejas a. bapat	1561
+k. selçuk candan	1562
+v. snehith cherukuri	1563
+hari sundaram	1564
+jin chen	1565
+liping ji	1566
+seung y. rhee	1567
+min wang	1568
+alexander thiem	1569
+kai-uwe sattler	1570
+katja hose	1571
+daniel klan	1572
+debabrata dash	1573
+verena kantere	1574
+anastasia ailamaki	1575
+peter belknap	1576
+benoit dageville	1577
+karl dias	1578
+khaled yagoub	1579
+karl schnaitter	1580
+jianfeng yan	1581
+bo zhang	1582
+chaitanya mishra	1583
+huaxin zhang	1584
+zhifeng bao	1585
+bo chen	1586
+veronica mayorga	1587
+chaitanya desai	1588
+nalini venkatasubramanian	1589
+ming xiong	1590
+landon detwiler	1591
+wolfgang gatterbauer	1592
+brent louie	1593
+peter tarczy-hornoch	1594
+sai wu	1595
+ahmed metwally	1596
+manivasakan sabesan	1597
+tore risch	1598
+florian rosenberg	1599
+philipp leitner	1600
+anton michlmayr	1601
+predrag celikovic	1602
+schahram dustdar	1603
+marcos báez	1604
+maurizio marchese	1605
+sara cohen	1606
+maayan shiloach	1607
+daniel zinn	1608
+shawn bowers	1609
+timothy mcphillips	1610
+bertram ludäscher	1611
+david b. lomet	1612
+parag agrawal	1613
+michael compton	1614
+leong hou u	1615
+myung-jae park	1616
+chin-wan chung	1617
+jun hong	1618
+zhongtian he	1619
+david a. bell	1620
+chen wang	1621
+li ma	1622
+yue pan	1623
+yuecel karabulut	1624
+ike nassi	1625
+changjie guo	1626
+jinquan dai	1627
+yuebo zhou	1628
+minqi zhou	1629
+archana ganapathi	1630
+harumi kuno	1631
+janet l. wiener	1632
+armando fox	1633
+michael jordan	1634
+david patterson	1635
+alexander behm	1636
+shengyue ji	1637
+jiewen huang	1638
+shuguo han	1639
+wee keong ng	1640
+avishek saha	1641
+shicong meng	1642
+bhuvan bamba	1643
+calton pu	1644
+mohamed yakout	1645
+abhijith kashyap	1646
+michalis petropoulos	1647
+sotiria tavoulari	1648
+bin yao	1649
+piyush kumar	1650
+yoshiharu ishikawa	1651
+yuichi iijima	1652
+dongxiang zhang	1653
+yeow meng chee	1654
+anirban mondal	1655
+masaru kitsuregawa	1656
+sungwoo park	1657
+taekyung kim	1658
+jonghyun park	1659
+jinha kim	1660
+hyeonseung im	1661
+yongzhen zhuang	1662
+panagiotis papadimitriou	1663
+dimitris sacharidis	1664
+yanhong zhou	1665
+junjie yao	1666
+zeinab abbassi	1667
+zaiben chen	1668
+nitin gupta	1669
+alan demers	1670
+philipp unterbrunner	1671
+walker white	1672
+zhenhui li	1673
+sudipto das	1674
+dina thomas	1675
+rajesh bordawekar	1676
+jian li	1677
+samir khuller	1678
+mo liu	1679
+ming li	1680
+denis golovnya	1681
+kajal claypool	1682
+yi-cheng tu	1683
+shaoping chen	1684
+sagar pandit	1685
+oliver kennedy	1686
+al demers	1687
+hicham g. elmongui	1688
+p. godfrey	1689
+j. gryz	1690
+a. hoppe	1691
+w. ma	1692
+c. zuzarte	1693
+ravi murthy	1694
+lik wong	1695
+nimar s. arora	1696
+lei gao	1697
+thuvan hoang	1698
+jingwei wu	1699
+zhuowei bao	1700
+anat eyal	1701
+sanjeev khanna	1702
+michael weiner	1703
+dawei jiang	1704
+yuan zhou	1705
+sayan ranu	1706
+henrique andrade	1707
+l. venkata subramaniam	1708
+tanveer a. faruquie	1709
+shajith ikbal	1710
+shantanu godbole	1711
+mukesh k. mohania	1712
+manoj syamala	1713
+van hai ho	1714
+paul compton	1715
+boualem benatallah	1716
+julien vayssière	1717
+lucio menzel	1718
+hartmut vogler	1719
+arash termehchy	1720
+yodsawalai chodpathumwan	1721
+yifei lu	1722
+jianxin li	1723
+chengfei liu	1724
+rui zhou	1725
+daisy zhe wang	1726
+long wei	1727
+yunyao li	1728
+goetz graefe	1729
+dario colazzo	1730
+giorgio ghelli	1731
+carlo sartiani	1732
+kaushik chakrabarti	1733
+muhammad aamir cheema	1734
+laure berti-equille	1735
+tamraparni dasu	1736
+guimei liu	1737
+mengling feng	1738
+yue wang	1739
+limsoon wong	1740
+see-kiong ng	1741
+tzia liang mah	1742
+edmund jon deoon lee	1743
+nikolay laptev	1744
+hamid mousavi	1745
+vincenzo russo	1746
+brian quanz	1747
+jun huan	1748
+meenakshi mishra	1749
+veronique benzaken	1750
+jean-daniel fekete	1751
+pierre-luc hemery	1752
+wael khemiri	1753
+nirmesh malviya	1754
+georg gottlob	1755
+giorgio orsi	1756
+andreas pieris	1757
+bin yang	1758
+zenan zhou	1759
+wei wu	1760
+xiaohui li	1761
+evangelia kalyvianaki	1762
+wolfram wiesemann	1763
+daniel kuhn	1764
+pit fender	1765
+bin bi	1766
+yinghui wu	1767
+shumo chu	1768
+xian li	1769
+arnab nandi	1770
+sang-won lee	1771
+michael j. carey	1772
+xiaowei ying	1773
+xintao wu	1774
+daniel barbara	1775
+david grabiner	1776
+konstantinos tsakalozos	1777
+herald kllapi	1778
+eva sitaridi	1779
+dimitris paparas	1780
+pengcheng xiong	1781
+yun chi	1782
+shenghuo zhu	1783
+hyun jin moon	1784
+hakan hacigumus	1785
+stefan aulbach	1786
+michael seibold	1787
+dean jacobs	1788
+karen works	1789
+roger moussalli	1790
+mariam salloum	1791
+walid najjar	1792
+yun peng	1793
+konstantinos karanasos	1794
+spyros zoupanos	1795
+elke rundensteiner	1796
+dan dougherty	1797
+ismail ari	1798
+maria kontaki	1799
+apostolos n. papadopoulos	1800
+kostas tsichlas	1801
+yannis manolopoulos	1802
+lixing wang	1803
+xin miao	1804
+yunhao liu	1805
+xi zhang	1806
+jan chomicki	1807
+ lucia	1808
+qian wan	1809
+raymond chi-wing wong	1810
+yu peng	1811
+eugene wu	1812
+fajar ardian	1813
+jiannan wang	1814
+jianhua fe	1815
+eftychia baikousi	1816
+georgios rogkakos	1817
+ning jin	1818
+dijun luo	1819
+chris ding	1820
+heng huang	1821
+feiping nie	1822
+tantan liu	1823
+amol ghoting	1824
+edwin pednault	1825
+vikas sindhwani	1826
+shirish tatikonda	1827
+u kang	1828
+duen horng chau	1829
+badrish chandramouli	1830
+jonathan goldstein	1831
+ivo santos	1832
+albert yu	1833
+pankaj k. agarwal	1834
+karsten klein	1835
+nils kriege	1836
+petra mutzel	1837
+suprio ray	1838
+bogdan simion	1839
+angela demke brown	1840
+raman grover	1841
+nicola onose	1842
+rares vernica	1843
+qijun zhu	1844
+yu cao	1845
+fei guo	1846
+yuting lin	1847
+hoang tam vo	1848
+julia stoyanovich	1849
+susan davidson	1850
+val tannen	1851
+robert fink	1852
+swaroop rath	1853
+saket sathe	1854
+marcos r. vieira	1855
+humberto l. razente	1856
+maria c.  n. barioni	1857
+caetano traina	1858
+s. sudarshan	1859
+suhas kajbaje	1860
+sandeep patidar	1861
+bhanu pratap gupta	1862
+devang vira	1863
+morten middelfart	1864
+yongqiang he	1865
+rubao lee	1866
+yin huai	1867
+namit jain	1868
+zhiwei xu	1869
+pankaj gulhane	1870
+amit madaan	1871
+rupesh mehta	1872
+sandeep satpal	1873
+srinivasan h. sengamedu	1874
+ashwin tengli	1875
+charu tiwari	1876
+thomas bernecker	1877
+tobias emrich	1878
+andreas zufle	1879
+ju fan	1880
+mahendra chavan	1881
+ravindra guravannavar	1882
+karthik ramachandra	1883
+ru fang	1884
+hui-i hsiao	1885
+yun wang	1886
+sivaramakrishnan narayanan	1887
+florian waas	1888
+mohamed ali	1889
+roman schindlauer	1890
+maximilian ahrens	1891
+istvan cseri	1892
+nishant dani	1893
+ajay kalhan	1894
+gopal kakivaya	1895
+ramesh manne	1896
+lev novik	1897
+tomas talius	1898
+jan schaffner	1899
+benjamin eckart	1900
+christian schwarz	1901
+hasso plattner	1902
+alexander zeier	1903
+atish das sarma	1904
+ashwin lall	1905
+danupon nanongkai	1906
+richard j. lipton	1907
+jim xu	1908
+yuchen zhao	1909
+ye wang	1910
+srinivasan parthasarathy	1911
+emmanuel muller	1912
+matthias schiffer	1913
+salvatore raunich	1914
+erhard rahm	1915
+xiang li	1916
+christoph quix	1917
+david kensche	1918
+sandra geisler	1919
+lisong guo	1920
+costandinos costa	1921
+christos laoudias	1922
+louis woods	1923
+emilien antoine	1924
+alban galland	1925
+kristian lyngbaek	1926
+neokis polyzotis	1927
+shaoxu song	1928
+stephen revilak	1929
+balaji palanisamy	1930
+lei dou	1931
+sven kohler	1932
+sean riddle	1933
+bertram ludascher	1934
+eric peukert	1935
+julian eberius	1936
+boris kostenko	1937
+rubi boim	1938
+slava novgorodov	1939
+yifan jin	1940
+keith b. frikken	1941
+kyle kauffman	1942
+aaron steele	1943
+aggelos kiayias	1944
+yeye he	1945
+siddharth barman	1946
+dingming wu	1947
+alex x. liu	1948
+ke shen	1949
+eric torng	1950
+duncan yung	1951
+federico cavalieri	1952
+giovanna guerrini	1953
+marco mesiti	1954
+vadim eisenberg	1955
+yaron kanza	1956
+paolo biondi	1957
+matteo golfarelli	1958
+stefano rizzi	1959
+xiuli ma	1960
+hongmei xiao	1961
+shuiyuan xie	1962
+qiong li	1963
+chunhua tian	1964
+sunghun kim	1965
+jorge-arnulfo quiane-ruiz	1966
+jorg schad	1967
+jens dittrich	1968
+chushi ren	1969
+kamal zellag	1970
+orion hodson	1971
+sameh elnikety	1972
+serena sorrentino	1973
+sonia bergamaschi	1974
+maciej gawinecki	1975
+sergej zerr	1976
+kerstin bischoff	1977
+sergey chernov	1978
+min xie	1979
+laks v. s. lakshmanan	1980
+peter t. wood	1981
+ioannis paparrizos	1982
+ricardo jimenez-peris	1983
+benjamin bustos	1984
+tomas skopal	1985
+ulf leser	1986
+katrin haegler	1987
+frank fiedler	1988
+yanghua xiao	1989
+ji hong	1990
+wanyun cui	1991
+zhenying he	1992
+guodong feng	1993
+dong deng	1994
+norifumi nishikawa	1995
+miyuki nakano	1996
+david p. woodruff	1997
+fujun liu	1998
+xiaoli wang	1999
+xiaofeng ding	2000
+shanshan ying	2001
+hai jin	2002
+fabian keller	2003
+klemens bohm	2004
+yang zhang	2005
+min soo kim	2006
+yang-sae moon	2007
+uwe draisbach	2008
+sascha szott	2009
+oliver wonneberg	2010
+jian gong	2011
+lu-an tang	2012
+yu zheng	2013
+jing yuan	2014
+alice leung	2015
+chih-chieh hung	2016
+wen-chih peng	2017
+dayu yuan	2018
+prasenjit mitra	2019
+huiwen yu	2020
+c. lee giles	2021
+changjiu jin	2022
+walaa eldin moustafa	2023
+lise getoor	2024
+jongwuk lee	2025
+hyunsouk cho	2026
+sabbas burdakis	2027
+mingwang tang	2028
+jeff m. phillips	2029
+jeffrey jestes	2030
+dhaval patel	2031
+kai zheng	2032
+xing xie	2033
+entong shen	2034
+ting yu	2035
+yongxin tong	2036
+hongkai wen	2037
+steven euijong whang	2038
+mehmet kuzu	2039
+mohammad saiful islam	2040
+hwee hwa pang	2041
+katrin eisenreich	2042
+jochen adamek	2043
+volker markl	2044
+gregor hackenbroich	2045
+hyo-sang lim	2046
+oktie hassanzadeh	2047
+wenyuan yu	2048
+todd j. green	2049
+manish singh	2050
+qiang zhu	2051
+stephan gunnemann	2052
+ines farber	2053
+xin luna dong	2054
+yizhou sun	2055
+arijit khan	2056
+jianzhong qi	2057
+yuan xue	2058
+jia pan	2059
+mert akdere	2060
+matteo riondato	2061
+eli upfal	2062
+stanley b. zdonik	2063
+thomas kissinger	2064
+hannes voigt	2065
+mohammad sadoghi	2066
+rija javed	2067
+naif tarafdar	2068
+harsh singh	2069
+rohan palaniappan	2070
+jia xu	2071
+qiushi bai	2072
+yu gu	2073
+zhenjie zhang	2074
+meiyu lu	2075
+srinivas bangalore	2076
+keivan kianmehr	2077
+negar koochakzadeh	2078
+reda alhajj	2079
+ulrike fischer	2080
+gunes aluç	2081
+david e. dehaan	2082
+ivan t. bowman	2083
+viktor leis	2084
+anastasios arvanitis	2085
+xin cao	2086
+junsang cho	2087
+charlie fang	2088
+semih salihoglu	2089
+satoshi torikai	2090
+ahmed m. aly	2091
+asmaa sallam	2092
+bala m. gnanasekaran	2093
+long-van nguyen-dinh	2094
+chunbin lin	2095
+bogdan cautis	2096
+mehdi kargar	2097
+aijun an	2098
+mohamed sarwat	2099
+ahmed eldawy	2100
+miao qiao	2101
+jing xu	2102
+foto n. afrati	2103
+david menestrina	2104
+aditya parameswaran	2105
+jeffrey d. ullman	2106
+rui li	2107
+kin hou lei	2108
+ravi khadiwala	2109
+erkang zhu	2110
+jacopo girardi	2111
+elke achtert	2112
+sascha goldhofer	2113
+erich schubert	2114
+arthur zimek	2115
+yuxiong he	2116
+gabriel kliot	2117
+steffen hirte	2118
+andreas seifert	2119
+stephan baumann	2120
+younghoon kim	2121
+kyuseok shim	2122
+benjamin gufler	2123
+angelika reiser	2124
+guo-jun qi	2125
+thomas huang	2126
+chen liu	2127
+luke dickens	2128
+ian molloy	2129
+jorge lobo	2130
+pau-chen cheng	2131
+alessandra russo	2132
+anisoara nica	2133
+ian charlesworth	2134
+maysum panju	2135
+yonghui xiao	2136
+james gardner	2137
+li xiong	2138
+roberto de virgilio	2139
+letizia tanca	2140
+songling liu	2141
+juan p. cedeno	2142
+maria luisa sapino	2143
+shengyu huang	2144
+xinsheng li	2145
+roger s. barga	2146
+jaliya ekanayake	2147
+wei lu	2148
+zijun xue	2149
+qingyun liu	2150
+tianlei hu	2151
+peng lu	2152
+isabel f. cruz	2153
+cosmin stroe	2154
+matteo palmonari	2155
+pawel jurczyk	2156
+slawomir goryczka	2157
+kyriacos e. pavlou	2158
+ameet kini	2159
+william wang	2160
+m. david allen	2161
+andrew sillers	2162
+paul-ake larson	2163
+jingren zhou	2164
+mark van de wiel	2165
+lars kolb	2166
+andreas thor	2167
+liang jeff chen	2168
+peter carlin	2169
+dimitrije filipovic	2170
+michael rys	2171
+nikita shamgunov	2172
+james f. terwilliger	2173
+milos todic	2174
+sasa tomasevic	2175
+dragan tomic	2176
+curtis e. dyreson	2177
+wangchao le	2178
+howard karloff	2179
+barna saha	2180
+michael busch	2181
+krishna gade	2182
+brian larson	2183
+patrick lok	2184
+samuel luckenbill	2185
+jimmy lin	2186
+aditya auradkar	2187
+chavdar botev	2188
+shirshanka das	2189
+dave de maagd	2190
+alex feinberg	2191
+phanindra ganti	2192
+bhaskar ghosh	2193
+kishore gopalakrishna	2194
+brendan harris	2195
+joel koshy	2196
+kevin krawez	2197
+jay kreps	2198
+shi lu	2199
+sunil nagaraj	2200
+neha narkhede	2201
+sasha pachev	2202
+igor perisic	2203
+tom quiggle	2204
+bob schulman	2205
+abraham sebastian	2206
+oliver seeliger	2207
+bboris shkolnik	2208
+chinmay soman	2209
+roshan sumbaly	2210
+kapil surlaker	2211
+sajid topiwala	2212
+cuong tran	2213
+balaji varadarajan	2214
+jemiah westerman	2215
+zach white	2216
+david zhang	2217
+jason zhang	2218
+claudio jossen	2219
+lukas blunschi	2220
+magdalini mori	2221
+hui j. chang	2222
+balasubramanyam sthanikam	2223
+saumya debray	2224
+srinath shankar	2225
+peter ward	2226
+nora derouiche	2227
+talel abdessalem	2228
+seema sundara	2229
+matthew perry	2230
+jayanta banerjee	2231
+aravind yalamanchi	2232
+matteo interlandidi	2233
+mario longo	2234
+laura po	2235
+maurizio vincini	2236
+zhian he	2237
+pei lee	2238
+jongik kim	2239
+hongrae lee	2240
+zhitao shen	2241
+xiang zhao	2242
+wush chi-hsuan wu	2243
+mi-yen yeh	2244
+Émilien antoine	2245
+peter druschel	2246
+jeremy kepner	2247
+alex szalay	2248
+cuneyt akcora	2249
+russell paulet	2250
+md. golam koasar	2251
+xun yi	2252
+xixuan feng	2253
+junfeng zhou	2254
+ziyang chen	2255
+xudong lin	2256
+jingfeng guo	2257
+cecilia procopiuc	2258
+jie bao	2259
+stefan endrullis	2260
+farhan tauheed	2261
+laurynas biveinis	2262
+thomas heinis	2263
+felix schurmann	2264
+henry markram	2265
+liansheng hua	2266
+yuxin huang	2267
+po-yuen wong	2268
+tak-ming chan	2269
+man-hon wong	2270
+kwong-sak leung	2271
+huxia shi	2272
+aubrey l. tatarowicz	2273
+carlo curino	2274
+evan p. c. jones	2275
+sam madden	2276
+dengfeng gao	2277
+stephen w. thomas	2278
+eric r. schendel	2279
+ye jin	2280
+neil shah	2281
+jackie chen	2282
+c. s. chang	2283
+seung-hoe ku	2284
+stephane ethier	2285
+scott klasky	2286
+robert latham	2287
+robert ross	2288
+nagiza f. samatova	2289
+liangliang ye	2290
+adam seering	2291
+xiao yu	2292
+sangkyum kim	2293
+sebastian seith	2294
+xiaohui tao	2295
+lili sun	2296
+hua wang	2297
+shuo ma	2298
+weiren yu	2299
+ambuj singh	2300
+nicholas d. larusso	2301
+jianzhong qiao	2302
+chuanfei xu	2303
+hyunsik choi	2304
+yon dohn chung	2305
+jihoon son	2306
+haemi yang	2307
+byungnam lim	2308
+soohyung kim	2309
+hyoseok ryu	2310
+radu stoica	2311
+per-ake larson	2312
+maximilian dylla	2313
+iris miliaraki	2314
+emad soroush	2315
+martin kaufmann	2316
+stefan hildenbrand	2317
+amin a. manjili	2318
+andreas tonder	2319
+wenjun yuan	2320
+fabian suchanek	2321
+nicholas jing yuan	2322
+shuo shang	2323
+yong sik kwon	2324
+joo yeon lee	2325
+juchang lee	2326
+chulwon lee	2327
+christian bensberg	2328
+michael muehle	2329
+franz farber	2330
+arthur h. lee	2331
+manish sethi	2332
+narendran sachindran	2333
+paul mineiro	2334
+tyson condie	2335
+markus weimer	2336
+jeff yuan	2337
+vanja josifovski	2338
+lluis garcia-pueyo	2339
+amr ahmed	2340
+sandeep pandey	2341
+jing li	2342
+lingkun wu	2343
+wenqing lin	2344
+jiajun liu	2345
+yanchun zhang	2346
+yasuhiro fujiwara	2347
+hiroaki shiokawa	2348
+makoto nakatsuji	2349
+wen fei fan	2350
+xin wang	2351
+sebastiaan j. van schaik	2352
+lampros papageorgiou	2353
+kai zeng	2354
+mohan yang	2355
+andy yuan xue	2356
+jin huang	2357
+zhenghua xu	2358
+xin yao	2359
+weishan dong	2360
+ke tang	2361
+yu wang	2362
+hongzhi yin	2363
+beth trushkowsky	2364
+purnamrita sarkar	2365
+tim kraska	2366
+xuan s. yang	2367
+luyi mo	2368
+hu shu	2369
+zhihong chong	2370
+heidi lam	2371
+alon y. halevy	2372
+boulos harb	2373
+fei wu	2374
+anton dignos	2375
+chengyuan zhang	2376
+cheqing jin	2377
+sumeet bajaj	2378
+radu sion	2379
+zoi kaoudi	2380
+meichun hsu	2381
+matthias j. sax	2382
+qiming chen	2383
+wentao wu	2384
+tao cheng	2385
+craig p. sayers	2386
+lisi chen	2387
+nhan-tue phan	2388
+jihong guan	2389
+xiaofei zhang	2390
+shengqi yang	2391
+akash das sarma	2392
+bhaskar dasgupta	2393
+a. neyestani	2394
+b. atassi	2395
+meng weiyi	2396
+b. p. beirne	2397
+jaeyoung do	2398
+can wang	2399
+longbing cao	2400
+zhong she	2401
+xiaohui xie	2402
+jiaying wang	2403
+bin wang	2404
+kevin wilkinson	2405
+farhana murtaza choudhury	2406
+sarah masud	2407
+laukik chitnis	2408
+vibhor rastogi	2409
+michael n. rice	2410
+jian wu	2411
+lijie ren	2412
+ziyu guan	2413
+nan li	2414
+xianggang zeng	2415
+yong yu	2416
+shangfu peng	2417
+vivek bharathan	2418
+lakshmikant shrinivas	2419
+sreenath bodagala	2420
+chuck bear	2421
+ariel cary	2422
+ohad rodeh	2423
+avani wildani	2424
+ethan l. miller	2425
+avishek anand	2426
+stephan seufert	2427
+srikanta bedathur	2428
+daniel fabbri	2429
+taesung lee	2430
+zhongyuan wang	2431
+mao yang	2432
+dong zhou	2433
+carbo kuo	2434
+chuntao hong	2435
+lintao zhang	2436
+lidong zhou	2437
+peng wang	2438
+chinya v. ravishankar	2439
+denilson barbosa	2440
+xu chu	2441
+xianke zhou	2442
+bingbing zhang	2443
+sindhuja ravichandran	2444
+binh han	2445
+kisung lee	2446
+qian chen	2447
+p. sadayappan	2448
+l venkata subramaniam	2449
+snigdha chaturvedi	2450
+bhupesh s. chawda	2451
+k hima prasad	2452
+shiyuan wang	2453
+john c. shafer	2454
+stelios paparizos	2455
+raymond ka wai sze	2456
+cheng long	2457
+guangyan huang	2458
+michael steyn	2459
+zhi qiao	2460
+kersi taraporewalla	2461
+jing he	2462
+jie cao	2463
+yi yang	2464
+fabian nagel	2465
+md. saiful islam	2466
+emre yigitoglu	2467
+ioannis patlakas	2468
+george sfakianakis	2469
+chuan lei	2470
+joshua d. guttman	2471
+sudipta sengupta	2472
+seung-keol kim	2473
+saravanan thirumuruganathan	2474
+jonathan dees	2475
+peter sanders	2476
+norman may	2477
+pierre senellart	2478
+asma souihli	2479
+weining yang	2480
+wahbeh qardaji	2481
+yu tang	2482
+peiwu zhang	2483
+biplob debnath	2484
+cristian ungureanu	2485
+akshat aranya	2486
+stephen rago	2487
+ken eguro	2488
+john c.  s. lui	2489
+pinghui wang	2490
+don towsley	2491
+xiaohong guan	2492
+junzhou zhao	2493
+yantao gan	2494
+yingjie shi	2495
+florian funke	2496
+holger pirk	2497
+stefan manegold	2498
+martin grund	2499
+martin kersten	2500
+kailun hu	2501
+yuan fang	2502
+hady w. lauw	2503
+michele guglielmi	2504
+yuqing zhu	2505
+kevin chen-chuan change	2506
+hongning wang	2507
+mianwei zhou	2508
+monica s. lam	2509
+stephen guo	2510
+jiwon seo	2511
+liang tang	2512
+haiquan chen	2513
+min-te sun	2514
+lidan shou	2515
+mithila nagendra	2516
+udayan khurana	2517
+jingen xiang	2518
+cong guo	2519
+xingquan zhu	2520
+chengqi zhang	2521
+shirui pan	2522
+xike xie	2523
+sean r. spillane	2524
+daniel bokser	2525
+daniel kemp	2526
+jeremy birnbaum	2527
+alan labouseur	2528
+paul w. olsen	2529
+jayadevan vijayan	2530
+jun-weon yoon	2531
+hongsong li	2532
+zhixian zhang	2533
+katsiaryna mirylenka	2534
+themis palpanas	2535
+yongtao ma	2536
+cagri balkesen	2537
+george beskales	2538
+artur galiullin	2539
+zechao shang	2540
+zheng li	2541
+chunyao song	2542
+ramarathnam venkatesan	2543
+ilia lotosh	2544
+steven liu	2545
+da yan	2546
+grigory yaroslavtsev	2547
+christopher schildt	2548
+claudio hartmann	2549
+kostas tzoumas	2550
+johann-christoph freytag	2551
+fabian hueske	2552
+mathias peters	2553
+matthias ringwald	2554
+aljoscha krettek	2555
+zhiguo gong	2556
+zhuojie zhou	2557
+dimitris fotakis	2558
