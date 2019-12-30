@@ -5,8 +5,8 @@ setup(
     version="0.0.1",
     install_requires=[
         "torch",
+        "dgl",
         "networkx",
-        "torch",
         "matplotlib",
         "tqdm",
         "numpy",
