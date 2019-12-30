@@ -47,7 +47,9 @@ class UnsupervisedNodeClassification(BaseTask):
             pyg = False
         else:
             pyg = True
-        if pyg and issubclass(dataset.__class__.__bases__[0], torch_geometric.data.Dataset):
+        if pyg and issubclass(
+            dataset.__class__.__bases__[0], torch_geometric.data.Dataset
+        ):
             self.num_nodes = self.data.y.shape[0]
             self.num_classes = dataset.num_classes
             self.label_matrix = np.zeros((self.num_nodes, self.num_classes), dtype=int)

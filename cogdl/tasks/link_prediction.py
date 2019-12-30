@@ -9,8 +9,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from gensim.models.keyedvectors import Vocab
 from six import iteritems
-from sklearn.metrics import (auc, f1_score, precision_recall_curve,
-                             roc_auc_score)
+from sklearn.metrics import auc, f1_score, precision_recall_curve, roc_auc_score
 from tqdm import tqdm
 
 from cogdl import options
@@ -73,10 +72,7 @@ def gen_node_pairs(train_data, valid_data, test_data):
     test_false_data = randomly_choose_false_edges(
         list(training_nodes), train_data, len(test_data)
     )
-    return (
-        (valid_true_data, valid_false_data),
-        (test_true_data, test_false_data),
-    )
+    return ((valid_true_data, valid_false_data), (test_true_data, test_false_data))
 
 
 def get_score(embs, node1, node2):
@@ -138,6 +134,7 @@ class LinkPrediction(BaseTask):
 
         edge_list = self.data.edge_index.numpy()
         edge_list = list(zip(edge_list[0], edge_list[1]))
+
         def remove_multiple_edges(edge_list):
             edge_set = set()
             for x, y in edge_list:
@@ -146,17 +143,19 @@ class LinkPrediction(BaseTask):
                 else:
                     edge_set.add((y, x))
             return list(edge_set)
+
         edge_list = remove_multiple_edges(edge_list)
 
         self.train_data, self.valid_data, self.test_data = divide_data(
             edge_list, [0.85, 0.05, 0.10]
         )
         from collections import defaultdict
+
         out_degrees = defaultdict(int)
         for x, y in self.train_data:
             out_degrees[x] += 1
             out_degrees[y] += 1
-        
+
         def filter_zero(edge_list):
             new = []
             a = []
@@ -168,14 +167,15 @@ class LinkPrediction(BaseTask):
                 else:
                     new.append((x, y))
             return edge_list, a
-        
+
         self.valid_data, a = filter_zero(self.valid_data)
         self.train_data += a
         self.test_data, a = filter_zero(self.test_data)
         self.train_data += a
 
         import pickle as pkl
-        pkl.dump(self.train_data, open('tmp.pkl', 'wb'))
+
+        pkl.dump(self.train_data, open("tmp.pkl", "wb"))
 
         self.valid_data, self.test_data = gen_node_pairs(
             self.train_data, self.valid_data, self.test_data

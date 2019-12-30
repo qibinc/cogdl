@@ -63,7 +63,12 @@ class Align(BaseTask):
         print(len(dict_1), len(dict_2))
         shared_keys = set(dict_1.keys()) & set(dict_2.keys())
         # HACK: deal with this later
-        shared_keys = list(filter(lambda x: dict_1[x] < emb_1.shape[0] and dict_2[x] < emb_2.shape[0], shared_keys))
+        shared_keys = list(
+            filter(
+                lambda x: dict_1[x] < emb_1.shape[0] and dict_2[x] < emb_2.shape[0],
+                shared_keys,
+            )
+        )
         print(f"num shared keys {len(shared_keys)}")
         emb_1 /= np.linalg.norm(emb_1, axis=1).reshape(-1, 1)
         emb_2 /= np.linalg.norm(emb_2, axis=1).reshape(-1, 1)
@@ -83,9 +88,5 @@ class Align(BaseTask):
                 all_results[k].append(int(reindex_dict[dict_2[key]] in idxs[:k]))
 
         return dict(
-            (
-                f"Recall @ {k}",
-                sum(all_results[k]) / len(all_results[k]),
-            )
-            for k in k_list
+            (f"Recall @ {k}", sum(all_results[k]) / len(all_results[k])) for k in k_list
         )

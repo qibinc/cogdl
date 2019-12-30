@@ -9,11 +9,6 @@ install:
 
 script:
   - black .
-  - coverage run -m pytest tests
-  - cd docs && make clean && make html && cd ..
-
-after_success:
-- coveralls
 
 notifications:
   email: false

@@ -13,6 +13,7 @@ from cogdl.data import Data, Dataset
 
 from . import register_dataset
 
+
 @register_dataset("align_single")
 class AlignSingleDataset(Dataset):
     def __init__(self, root, name):
@@ -56,30 +57,36 @@ class KDD(AlignSingleDataset):
     def __init__(self):
         super().__init__("../cogdl/data/panther/", "kdd")
 
+
 @register_dataset("icdm")
 class ICDM(AlignSingleDataset):
     def __init__(self):
         super().__init__("../cogdl/data/panther/", "icdm")
+
 
 @register_dataset("sigir")
 class SIGIR(AlignSingleDataset):
     def __init__(self):
         super().__init__("../cogdl/data/panther/", "sigir")
 
+
 @register_dataset("cikm")
 class CIKM(AlignSingleDataset):
     def __init__(self):
         super().__init__("../cogdl/data/panther/", "cikm")
+
 
 @register_dataset("sigmod")
 class SIGMOD(AlignSingleDataset):
     def __init__(self):
         super().__init__("../cogdl/data/panther/", "sigmod")
 
+
 @register_dataset("icde")
 class ICDE(AlignSingleDataset):
     def __init__(self):
         super().__init__("../cogdl/data/panther/", "icde")
+
 
 @register_dataset("align")
 class AlignDataset(Dataset):
@@ -120,7 +127,7 @@ class AlignDataset(Dataset):
         name_dict = dict()
         with open(dict_path) as f:
             for line in f:
-                name, str_x = line.split('\t')
+                name, str_x = line.split("\t")
                 x = int(str_x)
                 if x not in node2id:
                     node2id[x] = len(node2id)
@@ -137,13 +144,14 @@ class KDDICDM(AlignDataset):
     def __init__(self):
         super().__init__("../cogdl/data/panther/", "kdd", "icdm")
 
+
 @register_dataset("sigir_cikm")
 class SIGIRCIKM(AlignDataset):
     def __init__(self):
         super().__init__("../cogdl/data/panther/", "sigir", "cikm")
 
+
 @register_dataset("sigmod_icde")
 class KDDICDM(AlignDataset):
     def __init__(self):
         super().__init__("../cogdl/data/panther/", "sigmod", "icde")
-        
