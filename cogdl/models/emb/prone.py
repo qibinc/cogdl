@@ -48,8 +48,8 @@ class ProNE(BaseModel):
         )
         t_3 = time.time()
 
-        print("sparse NE time", t_2 - t_1)
-        print("spectral Pro time", t_3 - t_2)
+        # print("sparse NE time", t_2 - t_1)
+        # print("spectral Pro time", t_3 - t_2)
         self.embeddings = embeddings_matrix
 
         return self.embeddings
@@ -59,13 +59,13 @@ class ProNE(BaseModel):
         t1 = time.time()
         l = matrix.shape[0]
         smat = sp.csc_matrix(matrix)  # convert to sparse CSC format
-        print("svd sparse", smat.data.shape[0] * 1.0 / l ** 2)
+        # print("svd sparse", smat.data.shape[0] * 1.0 / l ** 2)
         U, Sigma, VT = randomized_svd(
             smat, n_components=self.dimension, n_iter=5, random_state=None
         )
         U = U * np.sqrt(Sigma)
         U = preprocessing.normalize(U, "l2")
-        print("sparsesvd time", time.time() - t1)
+        # print("sparsesvd time", time.time() - t1)
         return U
 
     def _get_embedding_dense(self, matrix, dimension):
@@ -80,7 +80,7 @@ class ProNE(BaseModel):
         s = np.sqrt(s)
         U = U * s
         U = preprocessing.normalize(U, "l2")
-        print("densesvd time", time.time() - t1)
+        # print("densesvd time", time.time() - t1)
         return U
 
     def _pre_factorization(self, tran, mask):
@@ -94,7 +94,7 @@ class ProNE(BaseModel):
 
         neg = sp.diags(neg, format="csr")
         neg = mask.dot(neg)
-        print("neg", time.time() - t1)
+        # print("neg", time.time() - t1)
 
         C1.data[C1.data <= 0] = 1
         neg.data[neg.data <= 0] = 1
@@ -109,7 +109,7 @@ class ProNE(BaseModel):
 
     def _chebyshev_gaussian(self, A, a, order=10, mu=0.5, s=0.5):
         # NE Enhancement via Spectral Propagation
-        print("Chebyshev Series -----------------")
+        # print("Chebyshev Series -----------------")
         t1 = time.time()
 
         if order == 1:
@@ -138,7 +138,7 @@ class ProNE(BaseModel):
             Lx0 = Lx1
             Lx1 = Lx2
             del Lx2
-            print("Bessell time", i, time.time() - t1)
+            # print("Bessell time", i, time.time() - t1)
         mm = A.dot(a - conv)
         emb = self._get_embedding_dense(mm, self.dimension)
         return emb

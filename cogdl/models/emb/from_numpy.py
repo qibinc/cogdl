@@ -26,6 +26,7 @@ class FromNumpy(BaseModel):
         super(FromNumpy, self).__init__()
         self.hidden_size = hidden_size
         self.emb = np.load(emb_path)
+        self.whitening = args.task == "unsupervised_node_classification"
 
         # HACK
         # args.hidden_size = 32
@@ -37,9 +38,10 @@ class FromNumpy(BaseModel):
         embeddings = np.asarray([self.emb[id2node[i]] for i in range(len(id2node))])
         assert G.number_of_nodes() == embeddings.shape[0]
         # embeddings = embeddings.T
-        embeddings = (embeddings - embeddings.mean(axis=0)) / (
-            embeddings.std(axis=0) + 1e-8
-        )
+        if self.whitening:
+            embeddings = (embeddings - embeddings.mean(axis=0)) / (
+                embeddings.std(axis=0) + 1e-8
+            )
         # embeddings = embeddings / (embeddings.std() + 1e-8)
         # embeddings = embeddings.T
 
@@ -72,6 +74,7 @@ class FromNumpyCatProne(BaseModel):
         super(FromNumpyCatProne, self).__init__()
         self.hidden_size = hidden_size
         self.emb = np.load(emb_path)
+        self.whitening = args.task == "unsupervised_node_classification"
 
         # HACK
         args.hidden_size //= 2
@@ -82,9 +85,10 @@ class FromNumpyCatProne(BaseModel):
         id2node = dict([(vid, node) for vid, node in enumerate(G.nodes())])
         embeddings = np.asarray([self.emb[id2node[i]] for i in range(len(id2node))])
         assert G.number_of_nodes() == embeddings.shape[0]
-        embeddings = (embeddings - embeddings.mean(axis=0)) / (
-            embeddings.std(axis=0) + 1e-8
-        )
+        if self.whitening:
+            embeddings = (embeddings - embeddings.mean(axis=0)) / (
+                embeddings.std(axis=0) + 1e-8
+            )
 
         prone_embeddings = self.prone.train(G)
 

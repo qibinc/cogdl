@@ -137,16 +137,16 @@ class Edgelist(Dataset):
 @register_dataset("usa_airport")
 class USAAirport(Edgelist):
     def __init__(self):
-        super().__init__("../cogdl/data/struc2vec/", "usa-airports")
+        super().__init__("cogdl/data/struc2vec/", "usa-airports")
 
 
 @register_dataset("brazil_airport")
 class BrazilAirport(Edgelist):
     def __init__(self):
-        super().__init__("../cogdl/data/struc2vec/", "brazil-airports")
+        super().__init__("cogdl/data/struc2vec/", "brazil-airports")
 
 
 @register_dataset("europe_airport")
 class EuropeAirport(Edgelist):
     def __init__(self):
-        super().__init__("../cogdl/data/struc2vec/", "europe-airports")
+        super().__init__("cogdl/data/struc2vec/", "europe-airports")
