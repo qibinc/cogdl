@@ -60,10 +60,7 @@ class FromNumpyCatProne(BaseModel):
         # fmt: off
         parser.add_argument('--emb-path', type=str,
                             help='Load embeddings from npy file')
-        parser.add_argument("--step", type=int, default=5,
-                            help=" Number of items in the chebyshev expansion")
-        parser.add_argument("--mu", type=float, default=0.2)
-        parser.add_argument("--theta", type=float, default=0.5)
+        ProNE.add_args(parser)
         # fmt: on
 
     @classmethod

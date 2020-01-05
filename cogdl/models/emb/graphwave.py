@@ -12,20 +12,22 @@ class GraphWave(BaseModel):
     def add_args(parser):
         """Add model-specific arguments to the parser."""
         # fmt: off
+        parser.add_argument("--scale", type=float, default=1e5)
         # fmt: on
 
     @classmethod
     def build_model_from_args(cls, args):
-        return cls(args.hidden_size, args)
+        return cls(args.hidden_size, args.scale, args)
 
-    def __init__(self, dimension, args):
+    def __init__(self, dimension, scale, args):
         super(GraphWave, self).__init__()
         self.dimension = dimension
+        self.scale = scale
         self.whitening = args.task == "unsupervised_node_classification"
 
     def train(self, G):
         chi, heat_print, taus = graphwave_alg(
-            G, np.linspace(0, 1e5, self.dimension // 4)
+            G, np.linspace(0, self.scale, self.dimension // 4)
         )
         if self.whitening:
             chi = (chi - chi.mean(axis=0)) / (chi.std(axis=0) + 1e-8)
@@ -38,19 +40,18 @@ class GraphwaveCatProne(BaseModel):
     def add_args(parser):
         """Add model-specific arguments to the parser."""
         # fmt: off
-        parser.add_argument("--step", type=int, default=5,
-                            help=" Number of items in the chebyshev expansion")
-        parser.add_argument("--mu", type=float, default=0.2)
-        parser.add_argument("--theta", type=float, default=0.5)
+        parser.add_argument("--scale", type=float, default=1e5)
+        ProNE.add_args(parser)
         # fmt: on
 
     @classmethod
     def build_model_from_args(cls, args):
-        return cls(args.hidden_size, args)
+        return cls(args.hidden_size, args.scale, args)
 
-    def __init__(self, dimension, args):
+    def __init__(self, dimension, scale, args):
         super(GraphwaveCatProne, self).__init__()
         self.dimension = dimension // 2
+        self.scale = scale
         self.whitening = args.task == "unsupervised_node_classification"
 
         # HACK
@@ -60,7 +61,7 @@ class GraphwaveCatProne(BaseModel):
 
     def train(self, G):
         chi, heat_print, taus = graphwave_alg(
-            G, np.linspace(0, 1e5, self.dimension // 4)
+            G, np.linspace(0, self.scale, self.dimension // 4)
         )
         if self.whitening:
             chi = (chi - chi.mean(axis=0)) / (chi.std(axis=0) + 1e-8)

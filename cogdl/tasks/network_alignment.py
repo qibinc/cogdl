@@ -45,7 +45,7 @@ class Align(BaseTask):
         self.args = args
 
     def _train_graph(self, data):
-        G = nx.Graph()
+        G = nx.MultiGraph()
         G.add_edges_from(data.edge_index.t().tolist())
         embeddings = self.model.train(G)
 

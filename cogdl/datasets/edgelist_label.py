@@ -96,7 +96,7 @@ class Edgelist(Dataset):
         self.name = name
         edge_list_path = os.path.join(root, name + ".edgelist")
         node_label_path = os.path.join(root, name + ".nodelabel")
-        edge_index, y = self._preprocess(edge_list_path, node_label_path)
+        edge_index, y, self.node2id = self._preprocess(edge_list_path, node_label_path)
         self.data = Data(x=None, edge_index=edge_index, y=y)
         self.transform = None
 
@@ -131,7 +131,7 @@ class Edgelist(Dataset):
         assert num_nodes == len(set(nodes))
         y = torch.zeros(num_nodes, len(label2id))
         y[nodes, labels] = 1
-        return torch.LongTensor(edge_list).t(), y
+        return torch.LongTensor(edge_list).t(), y, node2id
 
 
 @register_dataset("usa_airport")
