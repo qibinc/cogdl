@@ -138,6 +138,10 @@ class AlignDataset(Dataset):
 
         return torch.LongTensor(edge_list).t(), name_dict
 
+@register_dataset("kdd_kdd")
+class KDDICDM(AlignDataset):
+    def __init__(self):
+        super().__init__("cogdl/data/panther/", "kdd", "kdd")
 
 @register_dataset("kdd_icdm")
 class KDDICDM(AlignDataset):

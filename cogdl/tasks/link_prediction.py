@@ -173,9 +173,9 @@ class LinkPrediction(BaseTask):
         self.test_data, a = filter_zero(self.test_data)
         self.train_data += a
 
-        import pickle as pkl
+        # import pickle as pkl
 
-        pkl.dump(self.train_data, open("tmp.pkl", "wb"))
+        # pkl.dump(self.train_data, open("tmp.pkl", "wb"))
 
         self.valid_data, self.test_data = gen_node_pairs(
             self.train_data, self.valid_data, self.test_data

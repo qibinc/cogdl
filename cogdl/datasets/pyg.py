@@ -1,5 +1,6 @@
 import os.path as osp
 
+import numpy as np
 import torch
 
 import torch_geometric.transforms as T
@@ -15,6 +16,14 @@ class CoraDataset(Planetoid):
         path = osp.join(osp.dirname(osp.realpath(__file__)), "../..", "data", dataset)
         super(CoraDataset, self).__init__(path, dataset, T.TargetIndegree())
 
+@register_dataset("cora_struc")
+class CoraStrucDataset(Planetoid):
+    def __init__(self):
+        dataset = "Cora"
+        path = osp.join(osp.dirname(osp.realpath(__file__)), "../..", "data", dataset)
+        super(CoraStrucDataset, self).__init__(path, dataset, T.TargetIndegree())
+        struc_feat = np.load("saved/cora.npy")
+        self.data.x = torch.cat([self.data.x, torch.from_numpy(struc_feat)], dim=1)
 
 @register_dataset("citeseer")
 class CiteSeerDataset(Planetoid):
@@ -30,6 +39,16 @@ class PubMedDataset(Planetoid):
         dataset = "PubMed"
         path = osp.join(osp.dirname(osp.realpath(__file__)), "../..", "data", dataset)
         super(PubMedDataset, self).__init__(path, dataset, T.TargetIndegree())
+
+
+@register_dataset("pubmed_struc")
+class PubMedStrucDataset(Planetoid):
+    def __init__(self):
+        dataset = "PubMed"
+        path = osp.join(osp.dirname(osp.realpath(__file__)), "../..", "data", dataset)
+        super(PubMedStrucDataset, self).__init__(path, dataset, T.TargetIndegree())
+        struc_feat = np.load("saved/pubmed.npy")
+        self.data.x = torch.cat([self.data.x, torch.from_numpy(struc_feat)], dim=1)
 
 
 @register_dataset("reddit")

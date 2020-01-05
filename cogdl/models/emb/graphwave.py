@@ -1,0 +1,69 @@
+import numpy as np
+
+from graphwave import graphwave_alg
+
+from .. import BaseModel, register_model
+from .prone import ProNE
+
+
+@register_model("graphwave")
+class GraphWave(BaseModel):
+    @staticmethod
+    def add_args(parser):
+        """Add model-specific arguments to the parser."""
+        # fmt: off
+        # fmt: on
+
+    @classmethod
+    def build_model_from_args(cls, args):
+        return cls(args.hidden_size, args)
+
+    def __init__(self, dimension, args):
+        super(GraphWave, self).__init__()
+        self.dimension = dimension
+        self.whitening = args.task == "unsupervised_node_classification"
+
+    def train(self, G):
+        chi, heat_print, taus = graphwave_alg(
+            G, np.linspace(0, 1e5, self.dimension // 4)
+        )
+        if self.whitening:
+            chi = (chi - chi.mean(axis=0)) / (chi.std(axis=0) + 1e-8)
+        return chi
+
+
+@register_model("graphwave_cat_prone")
+class GraphwaveCatProne(BaseModel):
+    @staticmethod
+    def add_args(parser):
+        """Add model-specific arguments to the parser."""
+        # fmt: off
+        parser.add_argument("--step", type=int, default=5,
+                            help=" Number of items in the chebyshev expansion")
+        parser.add_argument("--mu", type=float, default=0.2)
+        parser.add_argument("--theta", type=float, default=0.5)
+        # fmt: on
+
+    @classmethod
+    def build_model_from_args(cls, args):
+        return cls(args.hidden_size, args)
+
+    def __init__(self, dimension, args):
+        super(GraphwaveCatProne, self).__init__()
+        self.dimension = dimension // 2
+        self.whitening = args.task == "unsupervised_node_classification"
+
+        # HACK
+        args.hidden_size //= 2
+        self.prone = ProNE.build_model_from_args(args)
+        args.hidden_size *= 2
+
+    def train(self, G):
+        chi, heat_print, taus = graphwave_alg(
+            G, np.linspace(0, 1e5, self.dimension // 4)
+        )
+        if self.whitening:
+            chi = (chi - chi.mean(axis=0)) / (chi.std(axis=0) + 1e-8)
+        prone_embeddings = self.prone.train(G)
+
+        return np.concatenate([chi, prone_embeddings], axis=1)

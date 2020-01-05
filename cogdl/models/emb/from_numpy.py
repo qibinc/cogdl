@@ -72,7 +72,7 @@ class FromNumpyCatProne(BaseModel):
 
     def __init__(self, hidden_size, emb_path, args):
         super(FromNumpyCatProne, self).__init__()
-        self.hidden_size = hidden_size
+        self.hidden_size = hidden_size // 2
         self.emb = np.load(emb_path)
         self.whitening = args.task == "unsupervised_node_classification"
 
@@ -116,12 +116,15 @@ class FromNumpyAlign(BaseModel):
         self.hidden_size = hidden_size
         self.emb_1 = np.load(emb_path_1)
         self.emb_2 = np.load(emb_path_2)
+        self.t1, self.t2 = False, False
 
     def train(self, G):
-        if G.number_of_nodes() == self.emb_1.shape[0]:
+        if G.number_of_nodes() == self.emb_1.shape[0] and not self.t1:
             emb = self.emb_1
-        elif G.number_of_nodes() == self.emb_2.shape[0]:
+            self.t1 = True
+        elif G.number_of_nodes() == self.emb_2.shape[0] and not self.t2:
             emb = self.emb_2
+            self.t2 = True
         else:
             raise NotImplementedError
 

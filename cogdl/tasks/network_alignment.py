@@ -3,6 +3,7 @@ import random
 import warnings
 from collections import defaultdict
 
+import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
 import scipy.sparse as sp
@@ -41,6 +42,7 @@ class Align(BaseTask):
 
         self.model = build_model(args)
         self.hidden_size = args.hidden_size
+        self.args = args
 
     def _train_graph(self, data):
         G = nx.Graph()
@@ -75,7 +77,7 @@ class Align(BaseTask):
         reindex = [dict_2[key] for key in shared_keys]
         reindex_dict = dict([(x, i) for i, x in enumerate(reindex)])
         emb_2 = emb_2[reindex]
-        k_list = [20, 40, 60, 80, 100]
+        k_list = range(0, 101, 20)
         id2name = dict([(dict_2[k], k) for k in dict_2])
 
         all_results = defaultdict(list)
@@ -86,7 +88,13 @@ class Align(BaseTask):
             idxs = scores.argsort()[::-1]
             for k in k_list:
                 all_results[k].append(int(reindex_dict[dict_2[key]] in idxs[:k]))
-
-        return dict(
+        res = dict(
             (f"Recall @ {k}", sum(all_results[k]) / len(all_results[k])) for k in k_list
         )
+
+        plt.scatter(x=k_list, y=[res[f"Recall @ {k}"] for k in k_list])
+        plt.xlim(0, 100)
+        plt.ylim(0, 0.3)
+        plt.savefig(self.args.dataset)
+
+        return res
