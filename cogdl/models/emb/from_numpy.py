@@ -7,6 +7,19 @@ from gensim.models import KeyedVectors, Word2Vec
 from .. import BaseModel, register_model
 from .prone import ProNE
 
+@register_model("zero")
+class Zero(BaseModel):
+
+    @classmethod
+    def build_model_from_args(cls, args):
+        return cls(args.hidden_size)
+
+    def __init__(self, hidden_size):
+        super(Zero, self).__init__()
+        self.hidden_size = hidden_size
+
+    def train(self, G):
+        return np.zeros((G.number_of_nodes(), self.hidden_size))
 
 @register_model("from_numpy")
 class FromNumpy(BaseModel):
@@ -38,10 +51,10 @@ class FromNumpy(BaseModel):
         embeddings = np.asarray([self.emb[id2node[i]] for i in range(len(id2node))])
         assert G.number_of_nodes() == embeddings.shape[0]
         # embeddings = embeddings.T
-        if self.whitening:
-            embeddings = (embeddings - embeddings.mean(axis=0)) / (
-                embeddings.std(axis=0) + 1e-8
-            )
+        # if self.whitening:
+        #     embeddings = (embeddings - embeddings.mean(axis=0)) / (
+        #         embeddings.std(axis=0) + 1e-8
+        #     )
         # embeddings = embeddings / (embeddings.std() + 1e-8)
         # embeddings = embeddings.T
 
@@ -51,6 +64,12 @@ class FromNumpy(BaseModel):
         # return np.random.normal(0, 1, embeddings.shape)
         return embeddings
 
+@register_model("from_numpy_graph")
+class FromNumpyGraph(FromNumpy):
+
+    def train(self, G):
+        assert G is None
+        return self.emb
 
 @register_model("from_numpy_cat_prone")
 class FromNumpyCatProne(BaseModel):
@@ -82,10 +101,10 @@ class FromNumpyCatProne(BaseModel):
         id2node = dict([(vid, node) for vid, node in enumerate(G.nodes())])
         embeddings = np.asarray([self.emb[id2node[i]] for i in range(len(id2node))])
         assert G.number_of_nodes() == embeddings.shape[0]
-        if self.whitening:
-            embeddings = (embeddings - embeddings.mean(axis=0)) / (
-                embeddings.std(axis=0) + 1e-8
-            )
+        # if self.whitening:
+        #     embeddings = (embeddings - embeddings.mean(axis=0)) / (
+        #         embeddings.std(axis=0) + 1e-8
+        #     )
 
         prone_embeddings = self.prone.train(G)
 

@@ -91,8 +91,8 @@ class ICDE(AlignSingleDataset):
 @register_dataset("align")
 class AlignDataset(Dataset):
     def __init__(self, root, name1, name2):
-        edge_index_1, dict_1 = self._preprocess(root, name1)
-        edge_index_2, dict_2 = self._preprocess(root, name2)
+        edge_index_1, dict_1, self.node2id_1 = self._preprocess(root, name1)
+        edge_index_2, dict_2, self.node2id_2 = self._preprocess(root, name2)
         self.data = [
             Data(x=None, edge_index=edge_index_1, y=dict_1),
             Data(x=None, edge_index=edge_index_2, y=dict_2),
@@ -136,7 +136,7 @@ class AlignDataset(Dataset):
         num_nodes = len(node2id)
         print(f"num_nodes: {num_nodes}")
 
-        return torch.LongTensor(edge_list).t(), name_dict
+        return torch.LongTensor(edge_list).t(), name_dict, node2id
 
 @register_dataset("kdd_kdd")
 class KDDICDM(AlignDataset):

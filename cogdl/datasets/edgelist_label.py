@@ -127,7 +127,13 @@ class Edgelist(Dataset):
                 if label not in label2id:
                     label2id[label] = len(label2id)
                 nodes.append(node2id[x])
-                labels.append(label2id[label])
+                if "hindex" in self.name:
+                    labels.append(label)
+                else:
+                    labels.append(label2id[label])
+            if "hindex" in self.name:
+                median = np.median(labels)
+                labels = [int(label > median) for label in labels]
         assert num_nodes == len(set(nodes))
         y = torch.zeros(num_nodes, len(label2id))
         y[nodes, labels] = 1
@@ -150,3 +156,18 @@ class BrazilAirport(Edgelist):
 class EuropeAirport(Edgelist):
     def __init__(self):
         super().__init__("cogdl/data/struc2vec/", "europe-airports")
+
+@register_dataset("h-index-rand-1")
+class EuropeAirport(Edgelist):
+    def __init__(self):
+        super().__init__("cogdl/data/hindex/", "aminer_hindex_rand1_5000")
+
+@register_dataset("h-index-top-1")
+class EuropeAirport(Edgelist):
+    def __init__(self):
+        super().__init__("cogdl/data/hindex/", "aminer_hindex_top1_5000")
+
+@register_dataset("h-index-rand20intop200")
+class EuropeAirport(Edgelist):
+    def __init__(self):
+        super().__init__("cogdl/data/hindex/", "aminer_hindex_rand20intop200_5000")

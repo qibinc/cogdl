@@ -29,8 +29,8 @@ class GraphWave(BaseModel):
         chi, heat_print, taus = graphwave_alg(
             G, np.linspace(0, self.scale, self.dimension // 4)
         )
-        if self.whitening:
-            chi = (chi - chi.mean(axis=0)) / (chi.std(axis=0) + 1e-8)
+        # if self.whitening:
+        #     chi = (chi - chi.mean(axis=0)) / (chi.std(axis=0) + 1e-8)
         return chi
 
 
@@ -63,8 +63,8 @@ class GraphwaveCatProne(BaseModel):
         chi, heat_print, taus = graphwave_alg(
             G, np.linspace(0, self.scale, self.dimension // 4)
         )
-        if self.whitening:
-            chi = (chi - chi.mean(axis=0)) / (chi.std(axis=0) + 1e-8)
+        # if self.whitening:
+        #     chi = (chi - chi.mean(axis=0)) / (chi.std(axis=0) + 1e-8)
         prone_embeddings = self.prone.train(G)
 
         return np.concatenate([chi, prone_embeddings], axis=1)

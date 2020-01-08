@@ -4,7 +4,7 @@ import numpy as np
 import torch
 
 import torch_geometric.transforms as T
-from torch_geometric.datasets import Planetoid, Reddit
+from torch_geometric.datasets import Planetoid, Reddit, TUDataset
 
 from . import register_dataset
 
@@ -57,3 +57,24 @@ class RedditDataset(Reddit):
         dataset = "Reddit"
         path = osp.join(osp.dirname(osp.realpath(__file__)), "../..", "data", dataset)
         super(RedditDataset, self).__init__(path, T.TargetIndegree())
+
+@register_dataset("collab")
+class CollabDataset(TUDataset):
+    def __init__(self):
+        dataset = "COLLAB"
+        path = osp.join(osp.dirname(osp.realpath(__file__)), "../..", "data", dataset)
+        super(CollabDataset, self).__init__(path, dataset)
+
+@register_dataset("imdb-binary")
+class IMDBBinaryDataset(TUDataset):
+    def __init__(self):
+        dataset = "IMDB-BINARY"
+        path = osp.join(osp.dirname(osp.realpath(__file__)), "../..", "data", dataset)
+        super(IMDBBinaryDataset, self).__init__(path, dataset)
+
+@register_dataset("imdb-multi")
+class IMDBMultiDataset(TUDataset):
+    def __init__(self):
+        dataset = "IMDB-MULTI"
+        path = osp.join(osp.dirname(osp.realpath(__file__)), "../..", "data", dataset)
+        super(IMDBMultiDataset, self).__init__(path, dataset)
