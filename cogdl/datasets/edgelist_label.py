@@ -116,6 +116,7 @@ class Edgelist(Dataset):
                 if y not in node2id:
                     node2id[y] = len(node2id)
                 edge_list.append([node2id[x], node2id[y]])
+                edge_list.append([node2id[y], node2id[x]])
 
         num_nodes = len(node2id)
         with open(node_label_path) as f:
@@ -158,16 +159,87 @@ class EuropeAirport(Edgelist):
         super().__init__("cogdl/data/struc2vec/", "europe-airports")
 
 @register_dataset("h-index-rand-1")
-class EuropeAirport(Edgelist):
+class HIndexRand1(Edgelist):
     def __init__(self):
         super().__init__("cogdl/data/hindex/", "aminer_hindex_rand1_5000")
 
 @register_dataset("h-index-top-1")
-class EuropeAirport(Edgelist):
+class HIndexTop1(Edgelist):
     def __init__(self):
         super().__init__("cogdl/data/hindex/", "aminer_hindex_top1_5000")
 
 @register_dataset("h-index-rand20intop200")
-class EuropeAirport(Edgelist):
+class HIndexTop200(Edgelist):
     def __init__(self):
         super().__init__("cogdl/data/hindex/", "aminer_hindex_rand20intop200_5000")
+
+class EdgelistWithAttr(Edgelist):
+    def __init__(self, root, name):
+        self.name = name
+        edge_list_path = os.path.join(root, name + ".edgelist")
+        node_label_path = os.path.join(root, name + ".nodelabel")
+        node_features_path = os.path.join(root, name + ".nodefeatures")
+        edge_index, y, self.node2id = self._preprocess(edge_list_path, node_label_path)
+        self.num_classes = y.shape[1]
+        x = self._preprocess_feats(node_features_path, self.node2id)
+        assert x.shape[0] == y.shape[0] and x.shape[0] == len(self.node2id)
+        y = y.argmax(dim=1)
+        self.data = Data(x=x, edge_index=edge_index, y=y)
+        indices = np.arange(x.shape[0])
+        np.random.shuffle(indices)
+        self.data.train_mask = torch.from_numpy(indices < int(0.2 * x.shape[0]))
+        self.data.val_mask = torch.from_numpy((int(0.2 * x.shape[0]) <= indices) & (indices < int(0.3 * x.shape[0])))
+        self.data.test_mask = torch.from_numpy(int(0.3 * x.shape[0]) <= indices)
+        import torch_geometric.transforms as T
+        self.transform = T.TargetIndegree()
+    
+    def _preprocess_feats(self, node_features_path, node2id):
+
+        with open(node_features_path) as f:
+            ids = []
+            feats = []
+            for line in f:
+                line = list(map(float, line.split()))
+                node = int(line[0])
+                feat = line[1:]
+                ids.append(node2id[node])
+                feats.append(torch.FloatTensor(feat))
+            feats = torch.stack(feats)
+            feats[ids] = feats
+        return feats
+
+@register_dataset("h-index-rand-1-attr")
+class HIndexRand1Attr(EdgelistWithAttr):
+    def __init__(self):
+        super().__init__("cogdl/data/hindex/", "aminer_hindex_rand1_5000")
+
+@register_dataset("h-index-rand-1-attr-cat-struc")
+class HIndexRand1Attr(EdgelistWithAttr):
+    def __init__(self):
+        super().__init__("cogdl/data/hindex/", "aminer_hindex_rand1_5000")
+        struc_feat = np.load("saved/h-index-rand-1.npy")
+        self.data.x = torch.cat([self.data.x, torch.from_numpy(struc_feat)], dim=1)
+
+@register_dataset("h-index-top-1-attr")
+class HIndexTop1Attr(EdgelistWithAttr):
+    def __init__(self):
+        super().__init__("cogdl/data/hindex/", "aminer_hindex_top1_5000")
+
+@register_dataset("h-index-top-1-attr-cat-struc")
+class HIndexTop1Attr(EdgelistWithAttr):
+    def __init__(self):
+        super().__init__("cogdl/data/hindex/", "aminer_hindex_top1_5000")
+        struc_feat = np.load("saved/h-index-top-1.npy")
+        self.data.x = torch.cat([self.data.x, torch.from_numpy(struc_feat)], dim=1)
+
+@register_dataset("h-index-rand20intop200-attr")
+class HIndexTop200Attr(EdgelistWithAttr):
+    def __init__(self):
+        super().__init__("cogdl/data/hindex/", "aminer_hindex_rand20intop200_5000")
+
+@register_dataset("h-index-rand20intop200-attr-cat-struc")
+class HIndexTop200Attr(EdgelistWithAttr):
+    def __init__(self):
+        super().__init__("cogdl/data/hindex/", "aminer_hindex_rand20intop200_5000")
+        struc_feat = np.load("saved/h-index-rand20intop200.npy")
+        self.data.x = torch.cat([self.data.x, torch.from_numpy(struc_feat)], dim=1)

@@ -101,6 +101,10 @@ class Data(object):
         r"""Returns the number of features per node in the graph."""
         return 1 if self.x.dim() == 1 else self.x.size(1)
 
+    @property
+    def num_nodes(self):
+        return self.x.size(0)
+
     def is_coalesced(self):
         r"""Returns :obj:`True`, if edge indices are ordered and do not contain
         duplicate entries."""
