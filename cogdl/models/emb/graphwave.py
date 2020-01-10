@@ -1,8 +1,7 @@
 import numpy as np
 
-from graphwave import graphwave_alg
-
 from .. import BaseModel, register_model
+from ._graphwave import graphwave_alg
 from .prone import ProNE
 
 
