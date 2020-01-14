@@ -78,3 +78,24 @@ class IMDBMultiDataset(TUDataset):
         dataset = "IMDB-MULTI"
         path = osp.join(osp.dirname(osp.realpath(__file__)), "../..", "data", dataset)
         super(IMDBMultiDataset, self).__init__(path, dataset)
+
+@register_dataset("rdt-b")
+class RedditBinaryDataset(TUDataset):
+    def __init__(self):
+        dataset = "REDDIT-BINARY"
+        path = osp.join(osp.dirname(osp.realpath(__file__)), "../..", "data", dataset)
+        super(RedditBinaryDataset, self).__init__(path, dataset)
+
+@register_dataset("rdt-5k")
+class RedditMulti5KDataset(TUDataset):
+    def __init__(self):
+        dataset = "REDDIT-MULTI-5K"
+        path = osp.join(osp.dirname(osp.realpath(__file__)), "../..", "data", dataset)
+        super(RedditMulti5KDataset, self).__init__(path, dataset)
+
+@register_dataset("rdt-12k")
+class RedditMulti12KDataset(TUDataset):
+    def __init__(self):
+        dataset = "REDDIT-MULTI-12K"
+        path = osp.join(osp.dirname(osp.realpath(__file__)), "../..", "data", dataset)
+        super(RedditMulti12KDataset, self).__init__(path, dataset)
