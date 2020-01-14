@@ -13,7 +13,7 @@ def get_parser():
     # parser.add_argument('--tensorboard-logdir', metavar='DIR', default='',
     #                     help='path to save logs for tensorboard, should match --logdir '
     #                          'of running tensorboard (default: no tensorboard logging)')
-    parser.add_argument('--seed', default=[1], type=int, nargs='+', metavar='N',
+    parser.add_argument('--seed', default=[42], type=int, nargs='+', metavar='N',
                         help='pseudo random number generator seed')
     parser.add_argument('--max-epoch', default=10000, type=int)
     parser.add_argument("--patience", type=int, default=500)
