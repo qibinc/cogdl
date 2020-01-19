@@ -1,4 +1,3 @@
-
 import copy
 import random
 import warnings
@@ -10,10 +9,12 @@ import scipy.sparse as sp
 import torch
 import torch.nn.functional as F
 from scipy import sparse as sp
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score
-from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import GridSearchCV, KFold, StratifiedKFold
 from sklearn.multiclass import OneVsRestClassifier
+from sklearn.svm import SVC, LinearSVC
 from sklearn.utils import shuffle as skshuffle
 from tqdm import tqdm
 
@@ -23,9 +24,10 @@ from cogdl.datasets import build_dataset
 from cogdl.models import build_model
 
 from . import BaseTask, register_task
-from .unsupervised_node_classification import UnsupervisedNodeClassification, TopKRanker
+from .unsupervised_node_classification import TopKRanker, UnsupervisedNodeClassification
 
 warnings.filterwarnings("ignore")
+
 
 @register_task("graph_classification")
 class GraphClassification(UnsupervisedNodeClassification):
@@ -65,52 +67,93 @@ class GraphClassification(UnsupervisedNodeClassification):
         # label nor multi-label
         label_matrix = self.label_matrix
         label_matrix = torch.Tensor(self.label_matrix)
+        labels = np.array(label_matrix.argmax(axis=1).squeeze().tolist())
 
-        return self._evaluate(embeddings, label_matrix, self.num_shuffle)
+        self._evaluate = lambda x, y: self.svc_classify(x, y, False)
+        # self._evaluate = lambda x, y: self.linearsvc_classify(x, y, True)
+        # self._evaluate = lambda x, y: self.log_classify(x, y, True)
+        # self._evaluate = lambda x, y: self.randomforest_classify(x, y, False)
 
-    def _evaluate(self, features_matrix, label_matrix, num_shuffle):
-        # features_matrix, node2id = utils.load_embeddings(args.emb)
-        # label_matrix = utils.load_labels(args.label, node2id, divi_str=" ")
+        return self._evaluate(embeddings, labels)
 
-        # shuffle, to create train/test groups
-        # shuffles = []
-        skf = StratifiedKFold(n_splits=10, shuffle = True, random_state = self.seed)
-        idx_list = []
-        labels = label_matrix.argmax(axis=1).squeeze().tolist()
-        for idx in skf.split(np.zeros(len(labels)), labels):
-            idx_list.append(idx)
-        # for _ in range(num_shuffle):
-        #     shuffles.append(skshuffle(features_matrix, label_matrix))
+    def log_classify(self, x, y, search):
+        kf = StratifiedKFold(n_splits=10, shuffle=True, random_state=self.seed)
+        accuracies = []
+        for train_index, test_index in kf.split(x, y):
 
-        # score each train/test group
-        all_results = defaultdict(list)
-        # training_percents = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
-        # training_percents = [0.1, 0.3, 0.5, 0.7, 0.8, 0.9]
-        # training_percents = [0.8]
+            x_train, x_test = x[train_index], x[test_index]
+            y_train, y_test = y[train_index], y[test_index]
+            # x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, test_size=0.1)
+            if search:
+                # params = {"C": [0.001, 0.01, 0.1, 1, 10, 100, 1000, 10000, 100000]}
+                params = {"C": [1, 10, 100, 1000, 10000, 100000]}
+                classifier = GridSearchCV(
+                    LogisticRegression(multi_class="ovr", solver="liblinear"), params, cv=5, scoring="accuracy", verbose=0, n_jobs=-1
+                )
+            else:
+                classifier = LogisticRegression(C=100000, multi_class="ovr", solver="liblinear")
+            classifier.fit(x_train, y_train)
+            accuracies.append(accuracy_score(y_test, classifier.predict(x_test)))
+        return {"Micro-F1": np.mean(accuracies)}
 
-        # for train_percent in training_percents:
-        for train_idx, test_idx in idx_list:
+    def svc_classify(self, x, y, search):
+        kf = StratifiedKFold(n_splits=10, shuffle=True, random_state=self.seed)
+        accuracies = []
+        for train_index, test_index in kf.split(x, y):
 
-            X_train = features_matrix[train_idx]
-            y_train = label_matrix[train_idx]
+            x_train, x_test = x[train_index], x[test_index]
+            y_train, y_test = y[train_index], y[test_index]
+            # x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, test_size=0.1)
+            if search:
+                # params = {"C": [0.001, 0.01, 0.1, 1, 10, 100, 1000, 10000, 100000]}
+                params = {"C": [1, 10, 100, 1000, 10000, 100000]}
+                classifier = GridSearchCV(
+                    SVC(), params, cv=5, scoring="accuracy", verbose=0, n_jobs=-1
+                )
+            else:
+                classifier = SVC(C=100000)
+            classifier.fit(x_train, y_train)
+            accuracies.append(accuracy_score(y_test, classifier.predict(x_test)))
+        return {"Micro-F1": np.mean(accuracies)}
 
-            X_test = features_matrix[test_idx]
-            y_test = label_matrix[test_idx]
+    def linearsvc_classify(self, x, y, search):
+        kf = StratifiedKFold(n_splits=10, shuffle=True, random_state=self.seed)
+        accuracies = []
+        for train_index, test_index in kf.split(x, y):
 
-            clf = TopKRanker(LogisticRegression())
-            clf.fit(X_train, y_train)
+            x_train, x_test = x[train_index], x[test_index]
+            y_train, y_test = y[train_index], y[test_index]
+            if search:
+                # params = {"C": [0.001, 0.01, 0.1, 1, 10, 100, 1000, 10000, 100000]}
+                params = {"C": [1, 10, 100, 1000, 10000, 100000]}
+                classifier = GridSearchCV(
+                    LinearSVC(), params, cv=5, scoring="accuracy", verbose=0, n_jobs=-1
+                )
+            else:
+                classifier = LinearSVC(C=100000)
+            classifier.fit(x_train, y_train)
+            accuracies.append(accuracy_score(y_test, classifier.predict(x_test)))
+        return {"Micro-F1": np.mean(accuracies)}
 
-            # find out how many labels should be predicted
-            top_k_list = y_test.sum(axis=1).long().tolist()
-            preds = clf.predict(X_test, top_k_list)
-            result = f1_score(y_test, preds, average="micro")
-            all_results[""].append(result)
-        # print("micro", result)
+    def randomforest_classify(self, x, y, search):
+        kf = StratifiedKFold(n_splits=10, shuffle=True, random_state=self.seed)
+        accuracies = []
+        for train_index, test_index in kf.split(x, y):
 
-        return dict(
-            (
-                f"Micro-F1 {train_percent}",
-                sum(all_results[train_percent]) / len(all_results[train_percent]),
-            )
-            for train_percent in sorted(all_results.keys())
-        )
+            x_train, x_test = x[train_index], x[test_index]
+            y_train, y_test = y[train_index], y[test_index]
+            if search:
+                params = {"n_estimators": [100, 200, 500, 1000]}
+                classifier = GridSearchCV(
+                    RandomForestClassifier(n_jobs=-1),
+                    params,
+                    cv=5,
+                    scoring="accuracy",
+                    verbose=0,
+                    n_jobs=-1
+                )
+            else:
+                classifier = RandomForestClassifier(n_estimators=100, n_jobs=-1)
+            classifier.fit(x_train, y_train)
+            accuracies.append(accuracy_score(y_test, classifier.predict(x_test)))
+        return {"Micro-F1": np.mean(accuracies)}
