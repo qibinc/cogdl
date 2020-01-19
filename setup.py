@@ -4,8 +4,6 @@ setup(
     name="cogdl",
     version="0.0.1",
     install_requires=[
-        "torch",
-        "dgl",
         "networkx",
         "matplotlib",
         "tqdm",
