@@ -70,8 +70,8 @@ class GraphClassification(UnsupervisedNodeClassification):
         labels = np.array(label_matrix.argmax(axis=1).squeeze().tolist())
 
         self._evaluate = lambda x, y: self.svc_classify(x, y, False)
-        # self._evaluate = lambda x, y: self.linearsvc_classify(x, y, True)
-        # self._evaluate = lambda x, y: self.log_classify(x, y, True)
+        # self._evaluate = lambda x, y: self.linearsvc_classify(x, y, False)
+        # self._evaluate = lambda x, y: self.log_classify(x, y, False)
         # self._evaluate = lambda x, y: self.randomforest_classify(x, y, False)
 
         return self._evaluate(embeddings, labels)

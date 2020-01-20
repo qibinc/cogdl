@@ -120,7 +120,7 @@ class UnsupervisedNodeClassification(BaseTask):
             X_test = features_matrix[test_idx]
             y_test = label_matrix[test_idx]
 
-            clf = TopKRanker(LogisticRegression())
+            clf = TopKRanker(LogisticRegression(C=1000))
             clf.fit(X_train, y_train)
 
             # find out how many labels should be predicted
