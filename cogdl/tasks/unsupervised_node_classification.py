@@ -34,8 +34,8 @@ class UnsupervisedNodeClassification(BaseTask):
     def add_args(parser):
         """Add task-specific arguments to the parser."""
         # fmt: off
-        parser.add_argument("--hidden-size", type=int, default=128)
-        parser.add_argument("--num-shuffle", type=int, default=5)
+        parser.add_argument("--hidden-size", type=int, default=64)
+        parser.add_argument("--num-shuffle", type=int, default=10)
         # fmt: on
 
     def __init__(self, args):
@@ -137,51 +137,6 @@ class UnsupervisedNodeClassification(BaseTask):
             )
             for train_percent in sorted(all_results.keys())
         )
-
-    # def _evaluate(self, features_matrix, label_matrix, num_shuffle):
-    #     # features_matrix, node2id = utils.load_embeddings(args.emb)
-    #     # label_matrix = utils.load_labels(args.label, node2id, divi_str=" ")
-
-    #     # shuffle, to create train/test groups
-    #     shuffles = []
-    #     for _ in range(num_shuffle):
-    #         shuffles.append(skshuffle(features_matrix, label_matrix))
-
-    #     # score each train/test group
-    #     all_results = defaultdict(list)
-    #     # training_percents = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
-    #     training_percents = [0.1, 0.3, 0.5, 0.7, 0.8, 0.9]
-    #     # training_percents = [0.8]
-
-    #     for train_percent in training_percents:
-    #         for shuf in shuffles:
-    #             X, y = shuf
-
-    #             training_size = int(train_percent * self.num_nodes)
-
-    #             X_train = X[:training_size, :]
-    #             y_train = y[:training_size, :]
-
-    #             X_test = X[training_size:, :]
-    #             y_test = y[training_size:, :]
-
-    #             clf = TopKRanker(LogisticRegression())
-    #             clf.fit(X_train, y_train)
-
-    #             # find out how many labels should be predicted
-    #             top_k_list = list(map(int, y_test.sum(axis=1).T.tolist()[0]))
-    #             preds = clf.predict(X_test, top_k_list)
-    #             result = f1_score(y_test, preds, average="micro")
-    #             all_results[train_percent].append(result)
-    #         # print("micro", result)
-
-    #     return dict(
-    #         (
-    #             f"Micro-F1 {train_percent}",
-    #             sum(all_results[train_percent]) / len(all_results[train_percent]),
-    #         )
-    #         for train_percent in sorted(all_results.keys())
-        # )
 
 
 class TopKRanker(OneVsRestClassifier):

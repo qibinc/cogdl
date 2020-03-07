@@ -119,6 +119,7 @@ class Edgelist(Dataset):
                 edge_list.append([node2id[y], node2id[x]])
 
         num_nodes = len(node2id)
+        print(num_nodes, len(edge_list))
         with open(node_label_path) as f:
             nodes = []
             labels = []
@@ -192,7 +193,7 @@ class EdgelistWithAttr(Edgelist):
         self.data.test_mask = torch.from_numpy(int(0.3 * x.shape[0]) <= indices)
         import torch_geometric.transforms as T
         self.transform = T.TargetIndegree()
-    
+
     def _preprocess_feats(self, node_features_path, node2id):
 
         with open(node_features_path) as f:

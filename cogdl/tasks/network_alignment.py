@@ -77,7 +77,8 @@ class Align(BaseTask):
         reindex = [dict_2[key] for key in shared_keys]
         reindex_dict = dict([(x, i) for i, x in enumerate(reindex)])
         emb_2 = emb_2[reindex]
-        k_list = range(0, 101, 20)
+        # k_list = range(0, 101, 20)
+        k_list = [1, 5, 10, 20]
         id2name = dict([(dict_2[k], k) for k in dict_2])
 
         all_results = defaultdict(list)

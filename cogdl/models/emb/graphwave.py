@@ -11,7 +11,7 @@ class GraphWave(BaseModel):
     def add_args(parser):
         """Add model-specific arguments to the parser."""
         # fmt: off
-        parser.add_argument("--scale", type=float, default=1e5)
+        parser.add_argument("--scale", type=float, default=100)
         # fmt: on
 
     @classmethod
